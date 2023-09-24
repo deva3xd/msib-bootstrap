@@ -21,6 +21,14 @@ body {
     border-radius: 5px;
     color: orange;
 }
+
+.inner-box p {
+    font-size: 23px;
+}
+
+.inner-box li {
+    font-size: 23px;
+}
 .inner2-box {
     background-color: white;
     padding: 5px;
