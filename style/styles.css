@@ -51,7 +51,7 @@
 /* Style hero */
 
 .background {
-    background-image: url('assets/banner_hero.png');
+    background-image: url('../assets/banner_hero.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
