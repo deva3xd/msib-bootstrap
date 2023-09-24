@@ -1,71 +1,239 @@
 * {
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* Gaya untuk Navbar */
+.navbar {
+    background-color: #FFBB5C; 
+    border-bottom: 2px solid #FFBB5C;
+    position: fixed; /* Membuat navbar tetap */
+    top: 0; /* Menempatkan navbar di bagian atas */
+    width: 100%; /* Lebar 100% */
+    z-index: 1000; /* Menempatkan navbar di atas konten */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; /* Mengatur jarak atas dan bawah */
 }
 
-header.site-navbar {
-    background-color: #FFBB5C; /* Ganti warna latar belakang header sesuai keinginan */
-    color: black; /* Warna teks header */
-    padding: 15px 0;
+.navbar-brand {
+    font-size: 20px; /* Ukuran teks logo */
+    font-weight: bold; /* Ketebalan teks logo */
+    color: black;
 }
 
-.site-logo {
-    display: flex; /* Menggunakan flexbox */
-    align-items: center; /* Sejajarkan elemen vertikal */
+.navbar-nav {
+   margin: 0;
+   margin-left: auto;
 }
 
-.site-logo img {
-    height: 50px;
-    width: 50px;
-    margin-right: 10px; /* Jarak antara gambar dan teks */
+.nav-item {
+    margin-right: 10px; /* Jarak antar item menu */
 }
 
-.site-logo a {
-    text-decoration: none;
+#navbarCustom .navbar-nav .nav-link {
+    color: black !important;
+}
+
+#navbarCustom .navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold; /* Teks tebal */
+    transition: color 0.3s; /* Efek transisi warna saat dihover */
+}
+
+.nav-link:hover {
+    color: white;
+    font-weight: bold; /* Membuat teks tebal saat dihover */
+}
+
+/* Style hero */
+
+.background {
+    background-image: url('assets/banner_hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background .row {
+    display: flex;
+    backdrop-filter: blur(6px) saturate(102%);
+    -webkit-backdrop-filter: blur(6px) saturate(102%);
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 70px;
+}
+
+h1.judul {
     color: black;
     font-weight: bold;
 }
 
-.site-navigation {
-    text-align: right; /* Menggeser teks menu ke kanan */
-    margin-left: 0; /* Menghapus margin kiri */
+.btn {
+    color: white;
+    font-weight: bold;
+    background-color: #E25E3E;
 }
 
-.site-navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-right: 0; /* Menghapus margin kanan */
+.custom-container {
+    background-color: #FFBB5C;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 100px; /* Margin di sisi kiri dan kanan */
 }
 
-.site-navigation ul li {
-    display: inline-block;
-    margin-left: 10px; /* Jarak antara setiap item menu */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.site-navigation a {
-    color: black; /* Warna teks menu */
-    text-decoration: none;
+.title {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100%;
+    margin: 10px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
     font-weight: bold;
 }
 
-/* Media query untuk perubahan tampilan pada perangkat seluler */
-@media (max-width: 768px) {
-    .site-logo {
-        margin-right: 0; /* Hilangkan jarak logo pada layar seluler */
+p.card-text {
+    font-size: 16px;
+}
+
+@media (min-width: 576px) {
+    .card {
+        width: calc(50% - 20px);
     }
 
-    .site-navigation {
-        text-align: center; /* Pusatkan menu pada layar seluler */
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: calc(33.33% - 20px);
     }
 
-    .site-navigation ul {
-        display: block;
-        text-align: center;
-        margin-right: 0; /* Hilangkan margin pada layar seluler */
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        width: calc(33.33% - 20px);
     }
+}
 
-    .site-navigation ul li {
-        margin: 10px 0; /* Beri jarak vertikal antara item menu pada layar seluler */
-    }
+/* Pilihan Lain */
+
+h2.subtitle {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 18px;
+}
+.rounded-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Membuat card menjadi bulat */
+    overflow: hidden; /* Menghilangkan sudut-sudut card yang terlihat di luar border-radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan pada card */
+    background-color: #E25E3E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.rounded-card img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain; /* Gambar akan memenuhi seluruh area card */
+}
+
+.rounded-card-container {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Jarak antara card dan teks di bawahnya */
+}
+
+.rounded-card-title {
+    font-weight: bold;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: #E25E3E;
+}
+
+/* Gaya untuk Footer */
+.footer {
+    background-color: #FFBB5C; 
+    color: rgb(0, 0, 0); 
+    padding: 30px 0; /* Jarak dalam footer */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Menyusun elemen di footer secara horizontal */
+    align-items: center; /* Pusatkan elemen vertikal di dalam footer */
+}
+
+.footer h6 {
+    color: black;
+    font-weight: bold; 
+}
+
+.footer p {
+    color: black;
+}
+.footer .social-icon {
+    color: white;
+    font-size: 24px; /* Ukuran ikon media sosial */
+    margin-right: 10px; /* Jarak antar ikon */
+}
+
+.footer .social-icon:hover {
+    color: #FFBB5C; /* Ganti dengan warna ikon saat dihover */
+}
+
+/* Copyright Section */
+.footer-copyright {
+    text-align: center;
+    background-color: #FFBB5C;
+    padding: 10px 0;
+}
+
+.footer-line {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black; /* Customize the line's appearance */
+}
+
+/* Copyright text styling */
+.footer-copyright p {
+    color: rgb(107, 104, 104);
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
 }
