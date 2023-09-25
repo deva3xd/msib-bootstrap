@@ -148,6 +148,65 @@ p.card-text {
     }
 }
 
+/* Custom Section About CSS */
+.custom-section {
+    padding: 60px 0;
+}
+
+.custom-section h2 {
+    font-weight: bold;
+}
+
+.custom-section a {
+    font-weight: bold;
+    color: #E25E3E;
+    text-decoration: none;
+}
+
+.custom-section a:hover {
+    color: black; /* Warna yang berubah saat dihover */
+}
+
+.custom-hello {
+    margin-left: 80px;
+}
+
+.custom-hello p {
+    padding-top: 18px;
+}
+
+.custom-card {
+    background-color: #E25E3E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-card h3 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-card li {
+    text-align: center;
+}
+
+.custom-card .btn {
+    background-color: green;
+    color: white;
+}
+
+.custom-card .btn:hover {
+    background-color: white; /* Warna latar belakang yang berubah saat dihover */
+    color: green;
+}
+
 /* Pilihan Lain */
 
 h2.subtitle {
