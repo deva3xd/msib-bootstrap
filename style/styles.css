@@ -237,3 +237,36 @@ h2.subtitle {
     text-align: center;
     align-items: center;
 }
+
+.container-contact{
+    background-color: #FFBB5C; /* Ganti warna latar belakang header sesuai keinginan */
+    color: black; /* Warna teks header */
+    width: 99%;
+    border-radius: 10px;
+    margin: 3px 3px;
+}
+
+.card-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin: 80px;
+    padding: 30px 0;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.col.card-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Ini untuk mengatur teks menjadi tengah */
+  }
+  
+  .contact-text {
+    margin-top: 10px; /* Sesuaikan dengan jarak yang Anda inginkan antara gambar dan teks */
+    font-weight: 500;
+    font-weight: bold;
+  }
+  
