@@ -85,6 +85,67 @@ h1.judul {
     background-color: #E25E3E;
 }
 
+/* Custom Section About CSS */
+.custom-section {
+    padding: 60px 0;
+}
+
+.custom-section h2 {
+    font-weight: bold;
+}
+
+.custom-section a {
+    font-weight: bold;
+    color: #E25E3E;
+    text-decoration: none;
+}
+
+.custom-section a:hover {
+    color: black; /* Warna yang berubah saat dihover */
+}
+
+.custom-hello {
+    margin-left: 80px;
+}
+
+.custom-hello p {
+    padding-top: 18px;
+}
+
+.custom-card {
+    background-color: #E25E3E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-card h3 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-card li {
+    text-align: center;
+}
+
+.custom-card .btn {
+    background-color: green;
+    color: white;
+}
+
+.custom-card .btn:hover {
+    background-color: white; /* Warna latar belakang yang berubah saat dihover */
+    color: green;
+}
+
+/* Alasan Kenapa */
+
 .custom-container {
     background-color: #FFBB5C;
     border-radius: 20px;
@@ -148,66 +209,20 @@ p.card-text {
     }
 }
 
-/* Custom Section About CSS */
-.custom-section {
-    padding: 60px 0;
-}
-
-.custom-section h2 {
-    font-weight: bold;
-}
-
-.custom-section a {
-    font-weight: bold;
-    color: #E25E3E;
-    text-decoration: none;
-}
-
-.custom-section a:hover {
-    color: black; /* Warna yang berubah saat dihover */
-}
-
-.custom-hello {
-    margin-left: 80px;
-}
-
-.custom-hello p {
-    padding-top: 18px;
-}
-
-.custom-card {
-    background-color: #E25E3E;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.custom-card h3 {
-    color: white;
-    font-weight: bold;
-    text-align: center;
-}
-
-.custom-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.custom-card li {
-    text-align: center;
-}
-
-.custom-card .btn {
-    background-color: green;
-    color: white;
-}
-
-.custom-card .btn:hover {
-    background-color: white; /* Warna latar belakang yang berubah saat dihover */
-    color: green;
+@media (max-width: 576px) {
+    .custom-container {
+        margin: 0 15px; /* Mengurangi margin kiri dan kanan */
+        width: auto; /* Biarkan lebar mengikuti lebar kontennya */
+        border-radius: 0; /* Menghilangkan border-radius agar lebih rapi di perangkat mobile */
+        padding: 10px; /* Mengurangi padding untuk memberikan lebih banyak ruang */
+    }
 }
 
 /* Pilihan Lain */
+
+.container-mt-5 {
+    margin-top: 5rem; /* Atur margin top sesuai kebutuhan */
+}
 
 h2.subtitle {
     text-align: center;
@@ -215,12 +230,13 @@ h2.subtitle {
     padding-top: 10px;
     padding-bottom: 18px;
 }
+
 .rounded-card {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Membuat card menjadi bulat */
-    overflow: hidden; /* Menghilangkan sudut-sudut card yang terlihat di luar border-radius */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan pada card */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #E25E3E;
     display: flex;
     justify-content: center;
@@ -233,23 +249,39 @@ h2.subtitle {
 .rounded-card img {
     width: 80%;
     height: 80%;
-    object-fit: contain; /* Gambar akan memenuhi seluruh area card */
+    object-fit: contain;
 }
 
 .rounded-card-container {
-   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10px; /* Jarak antara card dan teks di bawahnya */
+    margin-top: 10px;
 }
 
 .rounded-card-title {
     font-weight: bold;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 20px; /* Kurangi padding untuk teks di bawah card */
+    padding-right: 20px; /* Kurangi padding untuk teks di bawah card */
     color: #E25E3E;
+    text-align: center; /* Tambahkan alignment center */
+}
+
+@media (max-width: 991px) {
+/* Ketika lebar layar kurang dari atau sama dengan 991px (tablet) */
+    .rounded-card {
+        width: 200px; /* Biarkan ukuran card tetap */
+        margin: 0 auto; /* Tengahkan card di layar tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ketika lebar layar kurang dari 768px (perangkat mobile) */
+    .rounded-card {
+        width: 200px; /* Biarkan ukuran card tetap */
+        margin: 0 auto; /* Tengahkan card di layar mobile */
+    }
 }
 
 /* Gaya untuk Footer */
@@ -301,6 +333,7 @@ h2.subtitle {
     text-align: center;
     align-items: center;
 }
+
 
 /* Style Contact */
 .container-contact{
