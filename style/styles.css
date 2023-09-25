@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0; /* Mengatur jarak atas dan bawah */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-brand {
@@ -34,6 +35,10 @@
 }
 
 #navbarCustom .navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+#navbarCustom .navbar-nav .nav-item.active .nav-link {
     color: white !important;
 }
 
@@ -238,6 +243,7 @@ h2.subtitle {
     align-items: center;
 }
 
+/* Style Contact */
 .container-contact{
     background-color: #FFBB5C; /* Ganti warna latar belakang header sesuai keinginan */
     color: black; /* Warna teks header */
