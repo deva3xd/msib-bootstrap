@@ -38,6 +38,103 @@
     <!-- navbar end -->
 
     <!-- content -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ... (kode lainnya) ... -->
+</head>
+
+<body>
+    <!-- ... (kode lainnya) ... -->
+
+    <div class="container mt-5">
+        <h2>Daftar Menu Box Catering</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card menu-card">
+                    <img src="menu1.jpg" alt="Menu 1" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Paket Box 1</h3>
+                        <p class="card-text">Harga: Rp 30,000</p>
+                        <a href="#" class="btn btn-primary" onclick="showMenuDetails('Paket Box 1', 'Rp 30,000')">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card menu-card">
+                    <img src="menu2.jpg" alt="Menu 2" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Paket Box 2</h3>
+                        <p class="card-text">Harga: Rp 35,000</p>
+                        <a href="#" class="btn btn-primary" onclick="showMenuDetails('Paket Box 2', 'Rp 35,000')">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card menu-card">
+                    <img src="menu3.jpg" alt="Menu 3" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Paket Box 3</h3>
+                        <p class="card-text">Harga: Rp 25,000</p>
+                        <a href="#" class="btn btn-primary" onclick="showMenuDetails('Paket Box 3', 'Rp 25,000')">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tambahkan menu lainnya sesuai kebutuhan -->
+        </div>
+    </div>
+
+    <script>
+        function showMenuDetails(nama, harga) {
+            // Membuat pesan pop-up
+            alert('Detail Paket Makanan\nNama: ' + nama + '\nHarga: ' + harga);
+        }
+    </script>
+
+        <h2>Pemesanan Makanan</h2>
+        <form action="proses_pemesanan.php" method="post">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Alamat Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="makanan">Pilih Makanan:</label>
+                <select class="form-control" id="makanan" name="makanan" required>
+                    <option value="Nasi Padang">Paket Box 1</option>
+                    <option value="Rendang">Paket Box 2</option>
+                    <option value="Sate Padang">paket Box 3</option>
+                    <!-- Tambahkan pilihan makanan lainnya sesuai kebutuhan -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Pilih Paket Makanan:</label>
+                <div class="form-check">
+                    <input type="radio" id="paket1" name="paket" value="Paket Hemat" required class="form-check-input">
+                    <label for="paket1" class="form-check-label">Paket Hemat</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="paket2" name="paket" value="Paket Spesial" required class="form-check-input">
+                    <label for="paket2" class="form-check-label">Paket Spesial</label>
+                </div>
+                <!-- Tambahkan pilihan paket lainnya sesuai kebutuhan -->
+            </div>
+            <div class="form-group">
+                <label for="jumlah">Jumlah Pesanan:</label>
+                <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="pesan_tambahan">Pesan Tambahan:</label>
+                <textarea class="form-control" id="pesan_tambahan" name="pesan_tambahan"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
+        </form>
+    </div>
+
     <!-- content end -->
 
     <!-- footer -->
