@@ -219,7 +219,128 @@ p.card-text {
     }
 }
 
-/* Pilihan Lain */
+/* Menu Makanan */
+.card-coloum {
+    display: flex;
+    justify-content: center;
+    background-color: #ea9826;
+    
+    .card-menu {
+        margin: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        
+    .card-count-container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        padding: 20px 0px;
+    }
+        
+    .card-count{
+        font-weight: bold;
+        font-size: 38px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: auto;
+        margin-right: -50px;
+        padding-right: 25px;
+        overflow: hidden;
+        color: #ffffff;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+    }
+        
+    .card-content{
+        padding: 20px;
+        padding-top: 0px;
+        
+        > h2{
+            margin-top: 0px;
+            text-align: center;
+            }
+    }
+        
+    .card-footer{
+        padding: 20px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+        
+    &:nth-child(1){
+        .card-count, .card-footer{
+            background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+        }
+    }
+        
+        &:nth-child(2){
+        .card-count, .card-footer{
+            background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+        }
+        }
+        
+        &:nth-child(3){
+        .card-count, .card-footer{
+            background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+        }
+        }
+
+        &:nth-child(4){
+        .card-count, .card-footer{
+            background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+        }
+        }
+        
+        &:hover{
+        .card-count{
+            width: 100px;
+            height: 100px;
+        }
+        }
+    }
+    
+    @media (max-width: 767px){
+        flex-wrap: wrap;
+    }
+    }
+
+    .button-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .button-menu .btn-custom {
+        background-color: #f6671f;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card-content img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    h2.title-menu {
+        font-weight: bold;
+        color: black;
+        text-align: center;
+    }
+
+/* Melayani */
 
 .container-mt-5 {
     margin-top: 5rem; /* Atur margin top sesuai kebutuhan */
