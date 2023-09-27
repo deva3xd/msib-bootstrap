@@ -411,7 +411,7 @@ h2.subtitle {
     margin-right: 20px;
     margin-left: 10px;
     text-align: justify;
-    color:  #fff;
+    color:  #1e1e1e;
 }
 .p1 {
     text-align: center;
@@ -430,9 +430,9 @@ h2.subtitle {
     color: black;
 }
 .card-about {
+    columns: center;
     text-align: center;
     width: 200px;
-    margin-left: 185px;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 20px;
