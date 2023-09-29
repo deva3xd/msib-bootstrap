@@ -1,36 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --primary-color: #FFBB5C;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Gaya untuk Navbar */
+/* Style Navbar */
 .navbar {
-    background-color: #FFBB5C; 
+    background-color: #FFBB5C;
     border-bottom: 2px solid #FFBB5C;
-    position: fixed; /* Membuat navbar tetap */
-    top: 0; /* Menempatkan navbar di bagian atas */
-    width: 100%; /* Lebar 100% */
-    z-index: 1000; /* Menempatkan navbar di atas konten */
+    position: fixed;
+    /* Membuat navbar tetap */
+    top: 0;
+    /* Menempatkan navbar di bagian atas */
+    width: 100%;
+    /* Lebar 100% */
+    z-index: 1000;
+    /* Menempatkan navbar di atas konten */
     display: flex;
     justify-content: space-between;
-    padding: 10px 0; /* Mengatur jarak atas dan bawah */
+    padding: 10px 0;
+    /* Mengatur jarak atas dan bawah */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-brand {
-    font-size: 20px; /* Ukuran teks logo */
-    font-weight: bold; /* Ketebalan teks logo */
+    font-size: 20px;
+    /* Ukuran teks logo */
+    font-weight: bold;
+    /* Ketebalan teks logo */
     color: black;
 }
 
 .navbar-nav {
-   margin: 0;
-   margin-left: auto;
+    margin: 0;
+    margin-left: auto;
 }
 
 .nav-item {
-    margin-right: 10px; /* Jarak antar item menu */
+    margin-right: 10px;
+    /* Jarak antar item menu */
 }
 
 #navbarCustom .navbar-nav .nav-link {
@@ -47,13 +59,16 @@
 
 .nav-link {
     color: black;
-    font-weight: bold; /* Teks tebal */
-    transition: color 0.3s; /* Efek transisi warna saat dihover */
+    font-weight: bold;
+    /* Teks tebal */
+    transition: color 0.3s;
+    /* Efek transisi warna saat dihover */
 }
 
 .nav-link:hover {
     color: white;
-    font-weight: bold; /* Membuat teks tebal saat dihover */
+    font-weight: bold;
+    /* Membuat teks tebal saat dihover */
 }
 
 /* Style hero */
@@ -86,11 +101,127 @@ h1.judul {
     background-color: #E25E3E;
 }
 
+/* Style Section About */
+.custom-section {
+    padding: 60px 0;
+}
+
+.custom-section h2 {
+    font-weight: bold;
+    position: relative;
+    /* Mengatur posisi relatif untuk elemen */
+    display: inline-block;
+    /* Membuat elemen menjadi inline block */
+}
+
+.custom-section h2::after {
+    content: "";
+    /* Menambahkan konten di bawah elemen */
+    position: absolute;
+    /* Mengatur posisi absolut untuk elemen ::after */
+    left: 0;
+    /* Posisi awal dari kiri */
+    right: -10%;
+    /* Posisi awal dari kanan */
+    bottom: -10px;
+    /* Posisi awal dari bawah */
+    height: 5px;
+    /* Ketebalan garis bawah */
+    background-color: #E25E3E;
+    /* Warna garis bawah */
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.custom-section h2:hover::after {
+    width: 100%;
+    /* Memperlebar garis saat hover */
+    background-color: green;
+    /* Warna garis berubah saat hover */
+}
+
+.custom-section a {
+    font-weight: bold;
+    color: #E25E3E;
+    text-decoration: none;
+}
+
+.custom-section a:hover {
+    color: black;
+    /* Warna yang berubah saat dihover */
+}
+
+.custom-hello {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+}
+
+.custom-hello p {
+    padding-top: 18px;
+    text-align: justify;
+}
+
+.custom-card {
+    background-color: #E25E3E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-card h3 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom-card h3 i {
+    margin-right: 15px;
+    /* Menambah margin antara ikon dan teks */
+}
+
+.custom-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-card li {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.custom-card .btn {
+    background-color: green;
+    color: white;
+}
+
+.custom-card .btn:hover {
+    background-color: white;
+    /* Warna latar belakang yang berubah saat dihover */
+    color: green;
+}
+
+.btn-custom i {
+    padding-right: 8px;
+}
+
+@media (max-width: 992px) {
+    .custom-card {
+        width: 80%;
+        /* Adjust the width as needed */
+        margin: 0 auto;
+        /* Center the card horizontally */
+    }
+}
+
+/* Style Section Alasan Kenapa */
+
 .custom-container {
     background-color: #FFBB5C;
     border-radius: 20px;
     padding: 20px;
-    margin: 0 100px; /* Margin di sisi kiri dan kanan */
+    margin: 0 100px;
+    /* Margin di sisi kiri dan kanan */
 }
 
 .card-container {
@@ -127,6 +258,15 @@ p.card-text {
     font-size: 16px;
 }
 
+.card-icon {
+    font-size: 48px;
+    /* Ubah ukuran ikon sesuai kebutuhan */
+    margin-bottom: 10px;
+    /* Menambahkan jarak antara ikon dan judul */
+    color: #f6671f;
+    /* Ubah warna ikon */
+}
+
 @media (min-width: 576px) {
     .card {
         width: calc(50% - 20px);
@@ -149,79 +289,226 @@ p.card-text {
     }
 }
 
-/* Custom Section About CSS */
-.custom-section {
-    padding: 60px 0;
+@media (max-width: 576px) {
+    .custom-container {
+        margin: 0 15px;
+        /* Mengurangi margin kiri dan kanan */
+        width: auto;
+        /* Biarkan lebar mengikuti lebar kontennya */
+        border-radius: 0;
+        /* Menghilangkan border-radius agar lebih rapi di perangkat mobile */
+        padding: 10px;
+        /* Mengurangi padding untuk memberikan lebih banyak ruang */
+    }
 }
 
-.custom-section h2 {
+/* Style Section Menu Makanan terbaik */
+.container-menu {
+    background-color: #ea9826;
+    margin-top: 25px;
+}
+
+.card-coloum {
+    display: flex;
+    justify-content: center;
+    background-color: #ea9826;
+
+    .card-menu {
+        margin: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+        .card-count-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            padding: 20px 0px;
+        }
+
+        .card-count {
+            font-weight: bold;
+            font-size: 38px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: auto;
+            margin-right: -50px;
+            padding-right: 25px;
+            overflow: hidden;
+            color: #ffffff;
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card-count:hover {
+            transform: scale(1.1);
+            /* Menambah efek scaling saat disentuh */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            /* Menambah bayangan saat disentuh */
+            transition: transform 0.2s, box-shadow 0.2s;
+            /* Mengatur durasi animasi */
+        }
+
+        .card-content {
+            padding: 20px;
+            padding-top: 0px;
+
+            >h2 {
+                margin-top: 0px;
+                text-align: center;
+            }
+        }
+
+        .card-footer {
+            padding: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        &:nth-child(1) {
+
+            .card-count,
+            .card-footer {
+                background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+            }
+        }
+
+        &:nth-child(2) {
+
+            .card-count,
+            .card-footer {
+                background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+            }
+        }
+
+        &:nth-child(3) {
+
+            .card-count,
+            .card-footer {
+                background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+            }
+        }
+
+        &:nth-child(4) {
+
+            .card-count,
+            .card-footer {
+                background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+            }
+        }
+
+        &:hover {
+            .card-count {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1194px) {
+    .card-menu {
+        width: calc(50% - 20px);
+        /* Menampilkan hanya 2 kartu berdampingan */
+    }
+}
+
+@media (max-width: 767px) {
+    .card-menu {
+        width: 100%;
+    }
+}
+
+
+.button-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.button-menu .btn-custom {
+    background-color: #f6671f;
+    color: white;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.custom-section a {
-    font-weight: bold;
-    color: #E25E3E;
-    text-decoration: none;
+.button-menu .btn-custom:hover {
+    background-color: white;
+    color: #f6671f;
 }
 
-.custom-section a:hover {
-    color: black; /* Warna yang berubah saat dihover */
-}
-
-.custom-hello {
-    margin-left: 80px;
-}
-
-.custom-hello p {
-    padding-top: 18px;
-}
-
-.custom-card {
-    background-color: #E25E3E;
-    padding: 20px;
+.card-content img {
+    max-width: 100%;
+    /* Agar gambar mengisi seluruh lebar kartu */
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.custom-card h3 {
-    color: white;
+.container-menu h2 {
     font-weight: bold;
-    text-align: center;
-}
-
-.custom-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.custom-card li {
-    text-align: center;
-}
-
-.custom-card .btn {
-    background-color: green;
     color: white;
+    text-align: center;
+    padding-top: 40px;
 }
 
-.custom-card .btn:hover {
-    background-color: white; /* Warna latar belakang yang berubah saat dihover */
-    color: green;
+.container-menu i.fa-star {
+    background: linear-gradient(90deg, #f6671f, #c01b1c);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-/* Pilihan Lain */
+/* Style Section Melayani */
+
+.container-mt-5 {
+    margin-top: 5rem;
+    /* Atur margin top sesuai kebutuhan */
+}
 
 h2.subtitle {
     text-align: center;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 18px;
+    position: relative;
+    /* Tambahkan posisi relatif */
 }
+
+h2.subtitle::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    /* Lebar garis bawah */
+    height: 5px;
+    /* Tinggi garis bawah */
+    background-color: #E25E3E;
+    /* Warna garis bawah */
+}
+
 .rounded-card {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Membuat card menjadi bulat */
-    overflow: hidden; /* Menghilangkan sudut-sudut card yang terlihat di luar border-radius */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan pada card */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #E25E3E;
     display: flex;
     justify-content: center;
@@ -229,51 +516,87 @@ h2.subtitle {
     text-align: center;
     margin-left: 80px;
     margin-right: 80px;
+    transition: background-color 0.2s, transform 0.2s ease-in-out;
+    /* Transisi untuk perubahan warna latar belakang dan animasi */
 }
 
 .rounded-card img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain; /* Gambar akan memenuhi seluruh area card */
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
 }
 
 .rounded-card-container {
-   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10px; /* Jarak antara card dan teks di bawahnya */
+    margin-top: 10px;
 }
 
 .rounded-card-title {
     font-weight: bold;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 20px;
+    /* Kurangi padding untuk teks di bawah card */
+    padding-right: 20px;
+    /* Kurangi padding untuk teks di bawah card */
     color: #E25E3E;
+    text-align: center;
+    /* Tambahkan alignment center */
 }
 
-/* Gaya untuk Footer */
+.rounded-card:hover {
+    background-color: #FFBB5C;
+    transform: translateY(10px);
+    /* Animasi turun dari atas */
+}
+
+@media (max-width: 991px) {
+
+    /* Ketika lebar layar kurang dari atau sama dengan 991px (tablet) */
+    .rounded-card {
+        width: 200px;
+        /* Biarkan ukuran card tetap */
+        margin: 0 auto;
+        /* Tengahkan card di layar tablet */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Ketika lebar layar kurang dari 768px (perangkat mobile) */
+    .rounded-card {
+        width: 200px;
+        /* Biarkan ukuran card tetap */
+        margin: 0 auto;
+        /* Tengahkan card di layar mobile */
+    }
+}
+
+
+/* Style Footer */
 .footer {
-    background-color: #FFBB5C; 
-    color: rgb(0, 0, 0); 
-    padding: 30px 0; /* Jarak dalam footer */
+    background-color: #FFBB5C;
+    color: rgb(0, 0, 0);
+    padding: 30px 0;
+    /* Jarak dalam footer */
     margin-top: 20px;
     display: flex;
-    justify-content: space-between; /* Menyusun elemen di footer secara horizontal */
-    align-items: center; /* Pusatkan elemen vertikal di dalam footer */
+    justify-content: space-between;
+    /* Menyusun elemen di footer secara horizontal */
+    align-items: center;
+    /* Pusatkan elemen vertikal di dalam footer */
 }
 
 .footer h6 {
     color: black;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .footer p {
     color: black;
 }
 
-/* Copyright Section */
 .footer-copyright {
     text-align: center;
     background-color: #FFBB5C;
@@ -283,10 +606,10 @@ h2.subtitle {
 .footer-line {
     width: 50%;
     margin: 0 auto;
-    border: 1px solid black; /* Customize the line's appearance */
+    border: 1px solid black;
+    /* Customize the line's appearance */
 }
 
-/* Copyright text styling */
 .footer-copyright p {
     color: rgb(107, 104, 104);
     font-weight: bold;
@@ -300,7 +623,7 @@ h2.subtitle {
     width: 100%;
 }
 
-.card-contact{
+.card-contact {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,18 +638,19 @@ h2.subtitle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Ini untuk mengatur teks menjadi tengah */
-  }
-  
-  .contact-text {
-    margin-top: 10px; /* Sesuaikan dengan jarak yang Anda inginkan antara gambar dan teks */
+    text-align: center;
+    /* Ini untuk mengatur teks menjadi tengah */
+}
+
+.contact-text {
+    margin-top: 10px;
+    /* Sesuaikan dengan jarak yang Anda inginkan antara gambar dan teks */
     font-weight: 500;
     font-weight: bold;
-  }
-  
-/*About */
+}
 
 
+/* Page About */
 .outer-box-about {
     width: 95%;
     margin: 20px auto;
@@ -343,6 +667,7 @@ h2.subtitle {
     border-radius: 5px;
     color: #ffbb5c;
 }
+
 .inner2-box-about {
     background-color: #ffbb5c;
     padding: 2px;
@@ -361,10 +686,12 @@ h2.subtitle {
     margin-left: 35px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .h1-about {
     font-weight: bold;
     text-align: center;
 }
+
 .h2-about {
     color: #ffbb5c;
     font-size: 20px;
@@ -376,28 +703,32 @@ h2.subtitle {
     margin-right: 20px;
     margin-left: 10px;
     text-align: justify;
-    color:  #fff;
+    color: #1e1e1e;
 }
+
 .p1 {
     text-align: center;
-    color:  black;
+    color: black;
     font-size: 16px;
 }
+
 .p2 {
     font-size: 14px;
     margin-right: 5px;
     color: black;
 }
+
 .li-about {
     text-align: center;
     font-size: 16px;
     margin: 30px;
     color: black;
 }
+
 .card-about {
+    columns: center;
     text-align: center;
     width: 200px;
-    margin-left: 185px;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 20px;
@@ -413,4 +744,31 @@ h2.subtitle {
     border-radius: 5px;
 }
 
+/* menu */
+.wrapper-menu {
+    margin: 0 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
 
+.wrapper-paket {
+    margin: 0 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.btn-menu {
+    padding: 5px 50px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn-paket {
+    width: 100%;
+    padding: 5px 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF9B50;
+}
