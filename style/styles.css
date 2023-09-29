@@ -616,16 +616,11 @@ h2.subtitle::after {
     text-align: center;
 }
 
-
-/* Page Contact */
-.container-contact {
-    background-color: #FFBB5C;
-    /* Ganti warna latar belakang header sesuai keinginan */
-    color: black;
-    /* Warna teks header */
-    width: 99%;
-    border-radius: 10px;
-    margin: 3px 3px;
+/* Style Contact */
+.container-contact{
+    background-color: #FFBB5C; /* Ganti warna latar belakang header sesuai keinginan */
+    color: black; /* Warna teks header */
+    width: 100%;
 }
 
 .card-contact {
