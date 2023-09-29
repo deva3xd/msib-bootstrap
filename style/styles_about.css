@@ -1,0 +1,93 @@
+/* Page About */
+.outer-box-about {
+    width: 95%;
+    margin: 20px auto;
+    background-color: #ffbb5c;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inner-box-about {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffbb5c;
+}
+
+.inner2-box-about {
+    background-color: #ffbb5c;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: 280px;
+    margin-right: 35px;
+    color: #ff9b50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-about {
+    float: left;
+    width: 240px;
+    height: auto;
+    margin-top: 25px;
+    margin-left: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.h1-about {
+    font-weight: bold;
+    text-align: center;
+}
+
+.h2-about {
+    color: #ffbb5c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p3 {
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    text-align: justify;
+    color: #1e1e1e;
+}
+
+.p1 {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+
+.p2 {
+    font-size: 14px;
+    margin-right: 5px;
+    color: black;
+}
+
+.li-about {
+    text-align: center;
+    font-size: 16px;
+    margin: 30px;
+    color: black;
+}
+
+.card-about {
+    columns: center;
+    text-align: center;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-about img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
