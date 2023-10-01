@@ -1,6 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 $font-stack: Poppins, sans-serif;
 
 body {
     font: 100% $font-stack;
    
 }
+
+$navbar-bg-color: #FFBB5C;
+$navbar-border-color: #FFBB5C;
+$nav-link-hover-color: white;
+
+.navbar {
+  background-color: $navbar-bg-color;
+  border-bottom: 2px solid $navbar-border-color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-nav {
+  margin: 0;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+#navbarCustom .navbar-nav .nav-link {
+  color: black !important;
+}
+
+#navbarCustom .navbar-nav .nav-link:hover {
+  color: $nav-link-hover-color !important;
+}
+
+#navbarCustom .navbar-nav .nav-item.active .nav-link {
+  color: $nav-link-hover-color !important;
+}
+
+.nav-link {
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: $nav-link-hover-color;
+  font-weight: bold;
+}
+
+// Hero
+.background {
+    background-image: url('../assets/banner_hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    .row {
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.693);
+      border-radius: 12px;
+      border: 1px solid rgba(209, 213, 219, 0.3);
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 70px;
+    }
+  
+    h1.judul {
+      color: black;
+      font-weight: bold;
+    }
+  
+    .btn {
+      color: white;
+      font-weight: bold;
+      background-color: #E25E3E;
+    }
+  }
+
+//   Section About
+$primary-color: #E25E3E;
+$hover-color: green;
+
+.custom-section {
+  padding: 60px 0;
+
+  h2 {
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: -10%;
+      bottom: -10px;
+      height: 5px;
+      background-color: $primary-color;
+      transition: width 0.3s, background-color 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+      background-color: $hover-color;
+    }
+  }
+
+  a {
+    font-weight: bold;
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  .custom-hello {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+
+    p {
+      padding-top: 18px;
+      text-align: justify;
+    }
+  }
+
+  .custom-card {
+    background-color: $primary-color;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    h3 {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+
+      i {
+        margin-right: 15px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .btn {
+      background-color: $hover-color;
+      color: white;
+
+      &:hover {
+        background-color: white;
+        color: $hover-color;
+      }
+    }
+  }
+
+  .btn-custom {
+    i {
+      padding-right: 8px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .custom-card {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Section Alasan Kenapa
+$primary-color: #FFBB5C;
+$border-radius: 20px;
+$margin-sides: 100px;
+
+.custom-container {
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    padding: 20px;
+    margin: 0 $margin-sides;
+    // Margin di sisi kiri dan kanan
+}
+
+$card-width: 100%;
+$card-margin: 10px;
+$card-border-radius: 12px;
+$card-hover-transform: scale(1.05);
+$card-hover-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: $card-width;
+    margin: $card-margin;
+    border-radius: $card-border-radius;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: $card-hover-transform;
+    box-shadow: $card-hover-box-shadow;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+$card-text-font-size: 16px;
+p.card-text {
+    font-size: $card-text-font-size;
+}
+
+$card-icon-size: 48px;
+$card-icon-color: #f6671f;
+$card-icon-margin: 10px;
+
+.card-icon {
+    font-size: $card-icon-size;
+    // Ubah ukuran ikon sesuai kebutuhan
+    margin-bottom: $card-icon-margin;
+    // Menambahkan jarak antara ikon dan judul
+    color: $card-icon-color;
+    // Ubah warna ikon
+}
+
+@media (min-width: 576px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: calc(33.33% - 20px);
+    }
+
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-container {
+        margin: 0 15px;
+        // Mengurangi margin kiri dan kanan
+        width: auto;
+        // Biarkan lebar mengikuti lebar kontennya
+        border-radius: 0;
+        // Menghilangkan border-radius agar lebih rapi di perangkat mobile
+        padding: 10px;
+        // Mengurangi padding untuk memberikan lebih banyak ruang
+    }
+}
+
+
+  
+
+// Footer
+$footer-bg-color: #FFBB5C;
+$footer-text-color: rgb(0, 0, 0);
+$footer-line-color: black;
+$footer-copyright-bg-color: #FFBB5C;
+$footer-copyright-text-color: rgb(107, 104, 104);
+
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 30px 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h6 {
+    color: black;
+    font-weight: bold;
+  }
+
+  p {
+    color: black;
+  }
+}
+
+.footer-copyright {
+  text-align: center;
+  background-color: $footer-copyright-bg-color;
+  padding: 10px 0;
+
+  p {
+    color: $footer-copyright-text-color;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.footer-line {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid $footer-line-color;
+}
+
