@@ -232,6 +232,205 @@ p.card-text {
     padding: 10px;
   }
 }
+.container-menu {
+  background-color: #ea9826;
+  margin-top: 25px;
+}
+.container-menu .card-coloum {
+  display: flex;
+  justify-content: center;
+  background-color: #ea9826;
+}
+.container-menu .card-coloum .card-menu {
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.container-menu .card-coloum .card-menu .card-count-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 20px 0px;
+}
+.container-menu .card-coloum .card-menu .card-count {
+  font-weight: bold;
+  font-size: 38px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: auto;
+  margin-right: -50px;
+  padding-right: 25px;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+.container-menu .card-coloum .card-menu .card-count:hover {
+  transform: scale(1.1); /* Menambah efek scaling saat disentuh */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Menambah bayangan saat disentuh */
+  transition: transform 0.2s, box-shadow 0.2s; /* Mengatur durasi animasi */
+}
+.container-menu .card-coloum .card-menu .card-content {
+  padding: 20px;
+  padding-top: 0px;
+}
+.container-menu .card-coloum .card-menu .card-content > h2 {
+  margin-top: 0px;
+  text-align: center;
+}
+.container-menu .card-coloum .card-menu .card-footer {
+  padding: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.container-menu .card-coloum .card-menu:nth-child(1) .card-count,
+.container-menu .card-coloum .card-menu:nth-child(1) .card-footer, .container-menu .card-coloum .card-menu:nth-child(2) .card-count,
+.container-menu .card-coloum .card-menu:nth-child(2) .card-footer, .container-menu .card-coloum .card-menu:nth-child(3) .card-count,
+.container-menu .card-coloum .card-menu:nth-child(3) .card-footer, .container-menu .card-coloum .card-menu:nth-child(4) .card-count,
+.container-menu .card-coloum .card-menu:nth-child(4) .card-footer {
+  background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+}
+.container-menu .card-coloum .card-menu:hover .card-count {
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 767px) {
+  .container-menu .card-coloum {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1194px) {
+  .card-menu {
+    width: calc(50% - 20px); /* Menampilkan hanya 2 kartu berdampingan */
+  }
+}
+@media (max-width: 767px) {
+  .card-menu {
+    width: 100%;
+  }
+}
+.button-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.button-menu .btn-custom {
+  background-color: #f6671f;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.button-menu .btn-custom:hover {
+  background-color: white;
+  color: #f6671f;
+}
+
+.card-content img {
+  max-width: 100%; /* Agar gambar mengisi seluruh lebar kartu */
+  height: auto;
+  border-radius: 10px;
+}
+
+.container-menu h2 {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+.container-menu i.fa-star {
+  background: linear-gradient(90deg, #f6671f, #c01b1c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container-mt-5 {
+  margin-top: 5rem;
+}
+
+h2.subtitle {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 18px;
+  position: relative;
+}
+h2.subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 5px;
+  background-color: #E25E3E;
+}
+
+.rounded-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #E25E3E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  transition: background-color 0.2s, transform 0.2s ease-in-out;
+}
+.rounded-card img {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+.rounded-card:hover {
+  background-color: #FFBB5C;
+  transform: translateY(10px);
+}
+
+.rounded-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rounded-card-title {
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #E25E3E;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .rounded-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .rounded-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .footer {
   background-color: #FFBB5C;
   color: rgb(0, 0, 0);
@@ -242,11 +441,11 @@ p.card-text {
   align-items: center;
 }
 .footer h6 {
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 .footer p {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .footer-copyright {
