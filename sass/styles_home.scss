@@ -1,63 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-$font-stack: Poppins, sans-serif;
+@use "font";
 
-body {
-  font: 100% $font-stack;
-   
-}
 $primary-color: #FFBB5C;
-$nav-link-hover-color: white;
+$secondary-color: #E25E3E;
+$third-color: white;
+$fourth-color: black;
+$five-color: green;
+
 
 .navbar {
-  background-color: $primary-color;
-  border-bottom: 2px solid $primary-color;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.navbar-brand {
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-}
-
-.navbar-nav {
-  margin: 0;
-  margin-left: auto;
-}
-
-.nav-item {
-  margin-right: 10px;
-}
-
-#navbarCustom .navbar-nav .nav-link {
-  color: black !important;
-}
-
-#navbarCustom .navbar-nav .nav-link:hover {
-  color: $nav-link-hover-color !important;
-}
-
-#navbarCustom .navbar-nav .nav-item.active .nav-link {
-  color: $nav-link-hover-color !important;
-}
-
-.nav-link {
-  color: black;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: $nav-link-hover-color;
-  font-weight: bold;
-}
+    background-color: $primary-color;
+    border-bottom: 2px solid $primary-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: $fourth-color;
+  }
+  
+  .navbar-nav {
+    margin: 0;
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    margin-right: 10px;
+  }
+  
+  #navbarCustom .navbar-nav .nav-link {
+    color: $fourth-color !important;
+  }
+  
+  #navbarCustom .navbar-nav .nav-link:hover {
+    color: $third-color !important;
+  }
+  
+  #navbarCustom .navbar-nav .nav-item.active .nav-link {
+    color: $third-color !important;
+  }
+  
+  .nav-link {
+    color: $fourth-color;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: $third-color;
+    font-weight: bold;
+  }
 
 // Hero
 .background {
@@ -65,246 +64,251 @@ $nav-link-hover-color: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-  
+
     .row {
-      display: flex;
-      background-color: rgba(255, 255, 255, 0.693);
-      border-radius: 12px;
-      border: 1px solid rgba(209, 213, 219, 0.3);
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-top: 70px;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.693);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 70px;
     }
-  
+
     h1.judul {
-      color: black;
-      font-weight: bold;
+        color: $fourth-color;
+        font-weight: bold;
+    }
+
+    .btn {
+        color: $third-color;
+        font-weight: bold;
+        background-color: $secondary-color;
     }
   
-    .btn {
-      color: white;
-      font-weight: bold;
-      background-color: #E25E3E;
-    }
-  }
+}  
 
-//   Section About
-$primary-color: #E25E3E;
-$hover-color: green;
-
+// Section About
 .custom-section {
-  padding: 60px 0;
-
-  h2 {
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: -10%;
-      bottom: -10px;
-      height: 5px;
-      background-color: $primary-color;
-      transition: width 0.3s, background-color 0.3s;
+    padding: 60px 0;
+  
+    h2 {
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: -10%;
+        bottom: -10px;
+        height: 5px;
+        background-color: $secondary-color;
+        transition: width 0.3s, background-color 0.3s;
+      }
+  
+      &:hover::after {
+        width: 100%;
+        background-color: $five-color;
+      }
     }
-
-    &:hover::after {
-      width: 100%;
-      background-color: $hover-color;
+  
+    a {
+      font-weight: bold;
+      color: $secondary-color;
+      text-decoration: none;
+  
+      &:hover {
+        color: $fourth-color;
+      }
     }
   }
-
-  a {
-    font-weight: bold;
-    color: $primary-color;
-    text-decoration: none;
-
-    &:hover {
-      color: black;
-    }
-  }
-
+  
   .custom-hello {
     margin-left: 80px;
     margin-right: 80px;
     margin-bottom: 30px;
-
+  
     p {
       padding-top: 18px;
       text-align: justify;
     }
   }
-
+  
   .custom-card {
-    background-color: $primary-color;
+    background-color: $secondary-color;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+  
     h3 {
-      color: white;
+      color: $third-color;
       font-weight: bold;
       text-align: center;
-
+  
       i {
         margin-right: 15px;
       }
     }
-
+  
     ul {
       list-style: none;
       padding: 0;
     }
-
+  
     li {
       text-align: center;
       padding-top: 5px;
       padding-bottom: 5px;
     }
-
+  
     .btn {
-      background-color: $hover-color;
-      color: white;
-
+      background-color: $five-color;
+      color: $third-color;
+  
       &:hover {
-        background-color: white;
-        color: $hover-color;
+        background-color: $third-color;
+        color: $five-color;
       }
     }
   }
-
-  .btn-custom {
-    i {
-      padding-right: 8px;
-    }
+  
+  .btn-custom i {
+    padding-right: 8px;
   }
-
+  
   @media (max-width: 992px) {
     .custom-card {
       width: 80%;
       margin: 0 auto;
     }
   }
-}
 
-// Section Alasan Kenapa
-$primary-color: #FFBB5C;
-$border-radius: 20px;
-$margin-sides: 100px;
-
-.custom-container {
-    background-color: $primary-color;
-    border-radius: $border-radius;
+// Alasan Kenapa
+// Mixin untuk custom-container
+@mixin custom-container {
+    background-color: #FFBB5C;
+    border-radius: 20px;
     padding: 20px;
-    margin: 0 $margin-sides;
-}
-
-$card-width: 100%;
-$card-margin: 10px;
-$card-border-radius: 12px;
-$card-hover-transform: scale(1.05);
-$card-hover-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-
-.card-container {
+    margin: 0 100px; 
+  }
+  // Mixin untuk media query card
+  @mixin card-width($width) {
+    width: calc(#{$width} - 20px);
+  }
+  
+  // Mixin untuk mengatur ulang card-container
+  @mixin reset-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.title {
+  }
+  
+  .custom-container {
+    @include custom-container;
+  }
+  
+  .card-container {
+    @include reset-card-container;
+  }
+  
+  .title {
     color: white;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-}
-
-.card {
-    width: $card-width;
-    margin: $card-margin;
-    border-radius: $card-border-radius;
+  }
+  
+  .card {
+    width: 100%;
+    margin: 10px;
+    border-radius: 12px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-    transform: $card-hover-transform;
-    box-shadow: $card-hover-box-shadow;
-}
-
-.card-title {
-    font-weight: bold;
-}
-
-$card-text-font-size: 16px;
-p.card-text {
-    font-size: $card-text-font-size;
-}
-
-$card-icon-size: 48px;
-$card-icon-color: #f6671f;
-$card-icon-margin: 10px;
-
-.card-icon {
-    font-size: $card-icon-size;
-    margin-bottom: $card-icon-margin;
-    color: $card-icon-color;
-}
-
-@media (min-width: 576px) {
-    .card {
-        width: calc(50% - 20px);
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
-
-    .card:nth-child(4),
-    .card:nth-child(5) {
-        width: calc(50% - 20px);
+  
+    &-title {
+      font-weight: bold;
     }
-}
-
-@media (min-width: 992px) {
-    .card {
-        width: calc(33.33% - 20px);
+  
+    p.-text {
+      font-size: 16px;
     }
-
-    .card:nth-child(4),
-    .card:nth-child(5) {
-        width: calc(33.33% - 20px);
+  
+    &-icon {
+      font-size: 48px; 
+      margin-bottom: 10px; 
+      color: #f6671f; 
     }
-}
-
-@media (max-width: 576px) {
+  
+    @media (min-width: 576px) {
+      @include card-width(50%);
+    }
+  
+    &:nth-child(4),
+    &:nth-child(5) {
+      @media (min-width: 576px) {
+        @include card-width(50%);
+      }
+    }
+  
+    @media (min-width: 992px) {
+      @include card-width(33.33%);
+    }
+  
+    &:nth-child(4),
+    &:nth-child(5) {
+      @media (min-width: 992px) {
+        @include card-width(33.33%);
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
     .custom-container {
-        margin: 0 15px;
-        // Mengurangi margin kiri dan kanan
-        width: auto;
-        // Biarkan lebar mengikuti lebar kontennya
-        border-radius: 0;
-        // Menghilangkan border-radius agar lebih rapi di perangkat mobile
-        padding: 10px;
-        // Mengurangi padding untuk memberikan lebih banyak ruang
+      margin: 0 15px;
+      width: auto; 
+      border-radius: 0; 
+      padding: 10px; 
     }
-}
+  }
+  
+//   Section Menu
+@function card-background-color($index) {
+    $colors: (#f6671f, #c01b1c);
+    @return nth($colors, $index);
+  }
 
-// Section Menu
-.container-menu {
-  background-color: #ea9826;
-  margin-top: 25px;
-
+  @function button-text-color($hover: false) {
+    @if $hover {
+      @return #f6671f;
+    } @else {
+      @return white;
+    }
+  }
+  
+  .container-menu {
+    background-color: #ea9826;
+    margin-top: 25px;
+  }
+  
   .card-coloum {
     display: flex;
     justify-content: center;
     background-color: #ea9826;
-
+  
     .card-menu {
       margin: 20px;
       border-radius: 10px;
       background-color: #ffffff;
       overflow: hidden;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-
+  
       .card-count-container {
         display: flex;
         align-items: center;
@@ -312,7 +316,7 @@ $card-icon-margin: 10px;
         height: 100px;
         padding: 20px 0px;
       }
-
+  
       .card-count {
         font-weight: bold;
         font-size: 38px;
@@ -330,42 +334,43 @@ $card-icon-margin: 10px;
         box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
         text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
         transition: all 0.2s ease-in-out;
-
+  
         &:hover {
-          transform: scale(1.1); /* Menambah efek scaling saat disentuh */
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Menambah bayangan saat disentuh */
-          transition: transform 0.2s, box-shadow 0.2s; /* Mengatur durasi animasi */
+          transform: scale(1.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+          transition: transform 0.2s, box-shadow 0.2s;
         }
       }
-
+  
       .card-content {
         padding: 20px;
         padding-top: 0px;
-
+  
         > h2 {
           margin-top: 0px;
           text-align: center;
         }
       }
-
+  
       .card-footer {
         padding: 20px;
         color: #ffffff;
         font-weight: bold;
         font-size: 20px;
         text-align: center;
+        background-image: linear-gradient(90deg, card-background-color(1), card-background-color(2));
       }
-
+  
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3),
       &:nth-child(4) {
         .card-count,
         .card-footer {
-          background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+          background-image: linear-gradient(90deg, card-background-color(1), card-background-color(2));
         }
       }
-
+  
       &:hover {
         .card-count {
           width: 100px;
@@ -373,206 +378,48 @@ $card-icon-margin: 10px;
         }
       }
     }
-
+  
     @media (max-width: 767px) {
       flex-wrap: wrap;
     }
   }
-}
-
-@media (max-width: 1194px) {
-  .card-menu {
-    width: calc(50% - 20px); /* Menampilkan hanya 2 kartu berdampingan */
-  }
-}
-
-@media (max-width: 767px) {
-  .card-menu {
-    width: 100%;
-  }
-}
-
-.button-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-
-  .btn-custom {
-    background-color: #f6671f;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-
-    &:hover {
-      background-color: white;
-      color: #f6671f;
+  
+  .button-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  
+    .btn-custom {
+      background-color: #f6671f;
+      color: button-text-color();
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+  
+      &:hover {
+        background-color: button-background-color(true);
+        color: button-text-color(true);
+      }
     }
   }
-}
-
-.card-content img {
-  max-width: 100%; /* Agar gambar mengisi seluruh lebar kartu */
-  height: auto;
-  border-radius: 10px;
-}
-
-.container-menu {
-  h2 {
+  
+  .card-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .container-menu h2 {
     font-weight: bold;
     color: white;
     text-align: center;
     padding-top: 40px;
   }
-
-  i.fa-star {
+  
+  .container-menu i.fa-star {
     background: linear-gradient(90deg, #f6671f, #c01b1c);
     -webkit-background-clip: text;
     color: transparent;
   }
-}
-
-// Section Melayani
-$margin-top: 5rem;
-$subtitle-text-color: #E25E3E;
-$rounded-card-bg-color: #E25E3E;
-$rounded-card-hover-bg-color: #FFBB5C;
-$rounded-card-transition-duration: 0.2s;
-$rounded-card-hover-transform: translateY(10px);
-
-.container-mt-5 {
-  margin-top: $margin-top;
-}
-
-h2.subtitle {
-  text-align: center;
-  font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 18px;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 5px;
-    background-color: $subtitle-text-color;
-  }
-}
-
-.rounded-card {
-  $card-width: 200px;
-  $card-height: 200px;
-  $card-radius: 50px;
-
-  width: $card-width;
-  height: $card-height;
-  border-radius: $card-radius;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: $rounded-card-bg-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: 80px;
-  margin-right: 80px;
-  transition: background-color $rounded-card-transition-duration, transform $rounded-card-transition-duration ease-in-out;
-
-  img {
-    width: 55%;
-    height: 55%;
-    object-fit: contain;
-  }
-
-  &:hover {
-    background-color: $rounded-card-hover-bg-color;
-    transform: $rounded-card-hover-transform;
-  }
-}
-
-.rounded-card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.rounded-card-title {
-  font-weight: bold;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: $subtitle-text-color;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .rounded-card {
-    width: $card-width;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .rounded-card {
-    width: $card-width;
-    margin: 0 auto;
-  }
-}
-
-// Footer
-@mixin footer-styles($bg-color, $text-color, $line-color) {
-  background-color: $bg-color;
-  color: $text-color;
-  padding: 30px 0;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  h6 {
-    color: $text-color;
-    font-weight: bold;
-  }
-
-  p {
-    color: $text-color;
-  }
-}
-
-@mixin footer-copyright-styles($bg-color, $text-color) {
-  text-align: center;
-  background-color: $bg-color;
-  padding: 10px 0;
-
-  p {
-    color: $text-color;
-    font-weight: bold;
-    text-align: center;
-  }
-}
-
-@mixin footer-line-styles($line-color) {
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid $line-color;
-}
-
-.footer {
-  @include footer-styles(#FFBB5C, rgb(0, 0, 0), black);
-}
-
-.footer-copyright {
-  @include footer-copyright-styles(#FFBB5C, rgb(107, 104, 104));
-}
-
-.footer-line {
-  @include footer-line-styles(black);
-}
-
-
+  

@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-body {
-  font: 100% Poppins, sans-serif;
-}
-
 .navbar {
   background-color: #FFBB5C;
   border-bottom: 2px solid #FFBB5C;
@@ -109,56 +105,59 @@ body {
 .custom-section a:hover {
   color: black;
 }
-.custom-section .custom-hello {
+
+.custom-hello {
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 30px;
 }
-.custom-section .custom-hello p {
+.custom-hello p {
   padding-top: 18px;
   text-align: justify;
 }
-.custom-section .custom-card {
+
+.custom-card {
   background-color: #E25E3E;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.custom-section .custom-card h3 {
+.custom-card h3 {
   color: white;
   font-weight: bold;
   text-align: center;
 }
-.custom-section .custom-card h3 i {
+.custom-card h3 i {
   margin-right: 15px;
 }
-.custom-section .custom-card ul {
+.custom-card ul {
   list-style: none;
   padding: 0;
 }
-.custom-section .custom-card li {
+.custom-card li {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.custom-section .custom-card .btn {
+.custom-card .btn {
   background-color: green;
   color: white;
 }
-.custom-section .custom-card .btn:hover {
+.custom-card .btn:hover {
   background-color: white;
   color: green;
 }
-.custom-section .btn-custom i {
+
+.btn-custom i {
   padding-right: 8px;
 }
+
 @media (max-width: 992px) {
-  .custom-section .custom-card {
+  .custom-card {
     width: 80%;
     margin: 0 auto;
   }
 }
-
 .custom-container {
   background-color: #FFBB5C;
   border-radius: 20px;
@@ -186,32 +185,28 @@ body {
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
 .card-title {
   font-weight: bold;
 }
-
-p.card-text {
+.card p.-text {
   font-size: 16px;
 }
-
 .card-icon {
   font-size: 48px;
   margin-bottom: 10px;
   color: #f6671f;
 }
-
 @media (min-width: 576px) {
   .card {
     width: calc(50% - 20px);
   }
-  .card:nth-child(4),
-  .card:nth-child(5) {
+}
+@media (min-width: 576px) {
+  .card:nth-child(4), .card:nth-child(5) {
     width: calc(50% - 20px);
   }
 }
@@ -219,11 +214,13 @@ p.card-text {
   .card {
     width: calc(33.33% - 20px);
   }
-  .card:nth-child(4),
-  .card:nth-child(5) {
+}
+@media (min-width: 992px) {
+  .card:nth-child(4), .card:nth-child(5) {
     width: calc(33.33% - 20px);
   }
 }
+
 @media (max-width: 576px) {
   .custom-container {
     margin: 0 15px;
@@ -236,26 +233,27 @@ p.card-text {
   background-color: #ea9826;
   margin-top: 25px;
 }
-.container-menu .card-coloum {
+
+.card-coloum {
   display: flex;
   justify-content: center;
   background-color: #ea9826;
 }
-.container-menu .card-coloum .card-menu {
+.card-coloum .card-menu {
   margin: 20px;
   border-radius: 10px;
   background-color: #ffffff;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
-.container-menu .card-coloum .card-menu .card-count-container {
+.card-coloum .card-menu .card-count-container {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100px;
   padding: 20px 0px;
 }
-.container-menu .card-coloum .card-menu .card-count {
+.card-coloum .card-menu .card-count {
   font-weight: bold;
   font-size: 38px;
   width: 100px;
@@ -273,53 +271,44 @@ p.card-text {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease-in-out;
 }
-.container-menu .card-coloum .card-menu .card-count:hover {
-  transform: scale(1.1); /* Menambah efek scaling saat disentuh */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Menambah bayangan saat disentuh */
-  transition: transform 0.2s, box-shadow 0.2s; /* Mengatur durasi animasi */
+.card-coloum .card-menu .card-count:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.container-menu .card-coloum .card-menu .card-content {
+.card-coloum .card-menu .card-content {
   padding: 20px;
   padding-top: 0px;
 }
-.container-menu .card-coloum .card-menu .card-content > h2 {
+.card-coloum .card-menu .card-content > h2 {
   margin-top: 0px;
   text-align: center;
 }
-.container-menu .card-coloum .card-menu .card-footer {
+.card-coloum .card-menu .card-footer {
   padding: 20px;
   color: #ffffff;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-}
-.container-menu .card-coloum .card-menu:nth-child(1) .card-count,
-.container-menu .card-coloum .card-menu:nth-child(1) .card-footer, .container-menu .card-coloum .card-menu:nth-child(2) .card-count,
-.container-menu .card-coloum .card-menu:nth-child(2) .card-footer, .container-menu .card-coloum .card-menu:nth-child(3) .card-count,
-.container-menu .card-coloum .card-menu:nth-child(3) .card-footer, .container-menu .card-coloum .card-menu:nth-child(4) .card-count,
-.container-menu .card-coloum .card-menu:nth-child(4) .card-footer {
   background-image: linear-gradient(90deg, #f6671f, #c01b1c);
 }
-.container-menu .card-coloum .card-menu:hover .card-count {
+.card-coloum .card-menu:nth-child(1) .card-count,
+.card-coloum .card-menu:nth-child(1) .card-footer, .card-coloum .card-menu:nth-child(2) .card-count,
+.card-coloum .card-menu:nth-child(2) .card-footer, .card-coloum .card-menu:nth-child(3) .card-count,
+.card-coloum .card-menu:nth-child(3) .card-footer, .card-coloum .card-menu:nth-child(4) .card-count,
+.card-coloum .card-menu:nth-child(4) .card-footer {
+  background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+}
+.card-coloum .card-menu:hover .card-count {
   width: 100px;
   height: 100px;
 }
 @media (max-width: 767px) {
-  .container-menu .card-coloum {
+  .card-coloum {
     flex-wrap: wrap;
   }
 }
 
-@media (max-width: 1194px) {
-  .card-menu {
-    width: calc(50% - 20px); /* Menampilkan hanya 2 kartu berdampingan */
-  }
-}
-@media (max-width: 767px) {
-  .card-menu {
-    width: 100%;
-  }
-}
 .button-menu {
   display: flex;
   justify-content: center;
@@ -334,12 +323,12 @@ p.card-text {
   margin-bottom: 30px;
 }
 .button-menu .btn-custom:hover {
-  background-color: white;
+  background-color: button-background-color(true);
   color: #f6671f;
 }
 
 .card-content img {
-  max-width: 100%; /* Agar gambar mengisi seluruh lebar kartu */
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -350,119 +339,11 @@ p.card-text {
   text-align: center;
   padding-top: 40px;
 }
+
 .container-menu i.fa-star {
   background: linear-gradient(90deg, #f6671f, #c01b1c);
   -webkit-background-clip: text;
   color: transparent;
-}
-
-.container-mt-5 {
-  margin-top: 5rem;
-}
-
-h2.subtitle {
-  text-align: center;
-  font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 18px;
-  position: relative;
-}
-h2.subtitle::after {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 5px;
-  background-color: #E25E3E;
-}
-
-.rounded-card {
-  width: 200px;
-  height: 200px;
-  border-radius: 50px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #E25E3E;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: 80px;
-  margin-right: 80px;
-  transition: background-color 0.2s, transform 0.2s ease-in-out;
-}
-.rounded-card img {
-  width: 55%;
-  height: 55%;
-  object-fit: contain;
-}
-.rounded-card:hover {
-  background-color: #FFBB5C;
-  transform: translateY(10px);
-}
-
-.rounded-card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.rounded-card-title {
-  font-weight: bold;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #E25E3E;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .rounded-card {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 768px) {
-  .rounded-card {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-.footer {
-  background-color: #FFBB5C;
-  color: rgb(0, 0, 0);
-  padding: 30px 0;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer h6 {
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-}
-.footer p {
-  color: rgb(0, 0, 0);
-}
-
-.footer-copyright {
-  text-align: center;
-  background-color: #FFBB5C;
-  padding: 10px 0;
-}
-.footer-copyright p {
-  color: rgb(107, 104, 104);
-  font-weight: bold;
-  text-align: center;
-}
-
-.footer-line {
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid black;
 }
 
 /*# sourceMappingURL=styles_home.css.map */

@@ -13,25 +13,18 @@
     background-color: #FFBB5C;
     border-bottom: 2px solid #FFBB5C;
     position: fixed;
-    /* Membuat navbar tetap */
     top: 0;
-    /* Menempatkan navbar di bagian atas */
     width: 100%;
-    /* Lebar 100% */
     z-index: 1000;
-    /* Menempatkan navbar di atas konten */
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    /* Mengatur jarak atas dan bawah */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-brand {
     font-size: 20px;
-    /* Ukuran teks logo */
     font-weight: bold;
-    /* Ketebalan teks logo */
     color: black;
 }
 
@@ -42,7 +35,6 @@
 
 .nav-item {
     margin-right: 10px;
-    /* Jarak antar item menu */
 }
 
 #navbarCustom .navbar-nav .nav-link {
@@ -60,15 +52,12 @@
 .nav-link {
     color: black;
     font-weight: bold;
-    /* Teks tebal */
     transition: color 0.3s;
-    /* Efek transisi warna saat dihover */
 }
 
 .nav-link:hover {
     color: white;
     font-weight: bold;
-    /* Membuat teks tebal saat dihover */
 }
 
 /* Style hero */
