@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #FFBB5C;
+}
+
+/* menu */
+.wrapper-menu {
+    margin: 0 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+.wrapper-paket {
+    margin: 0 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.btn-menu {
+    padding: 5px 50px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn-paket {
+    width: 100%;
+    padding: 5px 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF9B50;
+}
+
+.btn-paket:hover {
+    color: #ffff;
+    background-color: #be743b;
+}
+
+.container-pesan {
+    background-color: var(--primary-color);
+    padding: 50px 40px;
+    border-radius: 10px;
+}
+
+.container-pesan h5 {
+    margin-bottom: 20px;
+}
+
+.btn-pesan {
+    border: none;
+    border-radius: 5px;
+    background-color: #FF9B50;
+}
+
+.btn-pesan:hover {
+    color: #ffff;
+    background-color: #be743b;
+}
