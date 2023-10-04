@@ -104,12 +104,12 @@
 /* CSS untuk form pemesanan */
 
 .form-container {
-    background-color: #f8f9fa;
+    background-color: #FFBB5C;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        
+
 }
 
 .form-container h2 {
