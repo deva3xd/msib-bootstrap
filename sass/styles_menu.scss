@@ -1,60 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-$color-primary: #FFBB5C;
-
-@function color-darken($color, $val) {
-    $darken : darken($color, $val);
-    @return $darken;
-}
-
-@function color-lighten($color, $val) {
-    $lighten : lighten($color, $val);
-    @return $lighten;
-}
+@use 'colors' as c;
+@import 'buttonMenu';
 
 /* menu */
 .wrapper-menu {
     margin: 0 5px;
     padding: 10px 0;
     border-radius: 5px;
-    background-color: $color-primary;
-}
-
-.btn-menu {
-    padding: 5px 50px;
-    border: none;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.btn-paket {
-    width: 100%;
-    padding: 5px 50px;
-    border: none;
-    border-radius: 5px;
-
-    &:hover {
-        color: #ffff;
-        background-color: color-lighten($color-primary, 5%);
-    }
+    background-color: c.$primary-color;
 }
 
 .container-pesan {
-    background-color: color-darken($color-primary, 5%);
+    background-color: c.$primary-color;
     padding: 50px 40px;
     border-radius: 10px;
 
     h5 {
         margin-bottom: 20px;
-    }
-}
-
-.btn-pesan {
-    border: none;
-    border-radius: 5px;
-    background-color: color-darken($color-primary, 10%);
-
-    &:hover {
-        color: #ffff;
-        background-color: #be743b;
     }
 }
