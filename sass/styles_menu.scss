@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 $color-primary: #FFBB5C;
-$hover-primary: lighten($color-primary, 50%);
+
+@function color-darken($color, $val) {
+    $darken : darken($color, $val);
+    @return $darken;
+}
+
+@function color-lighten($color, $val) {
+    $lighten : lighten($color, $val);
+    @return $lighten;
+}
 
 /* menu */
 .wrapper-menu {
     margin: 0 5px;
     padding: 10px 0;
     border-radius: 5px;
-    background-color: var(--primary-color);
-}
-
-.wrapper-paket {
-    margin: 0 5px;
-    padding: 10px 0;
-    border-radius: 5px;
+    background-color: $color-primary;
 }
 
 .btn-menu {
@@ -28,31 +31,30 @@ $hover-primary: lighten($color-primary, 50%);
     padding: 5px 50px;
     border: none;
     border-radius: 5px;
-    background-color: #FF9B50;
-}
 
-.btn-paket:hover {
-    color: #ffff;
-    background-color: $hover-primary;
+    &:hover {
+        color: #ffff;
+        background-color: color-lighten($color-primary, 5%);
+    }
 }
 
 .container-pesan {
-    background-color: var(--primary-color);
+    background-color: color-darken($color-primary, 5%);
     padding: 50px 40px;
     border-radius: 10px;
-}
 
-.container-pesan h5 {
-    margin-bottom: 20px;
+    h5 {
+        margin-bottom: 20px;
+    }
 }
 
 .btn-pesan {
     border: none;
     border-radius: 5px;
-    background-color: #FF9B50;
-}
+    background-color: color-darken($color-primary, 10%);
 
-.btn-pesan:hover {
-    color: #ffff;
-    background-color: #be743b;
+    &:hover {
+        color: #ffff;
+        background-color: #be743b;
+    }
 }

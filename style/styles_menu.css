@@ -4,13 +4,7 @@
   margin: 0 5px;
   padding: 10px 0;
   border-radius: 5px;
-  background-color: var(--primary-color);
-}
-
-.wrapper-paket {
-  margin: 0 5px;
-  padding: 10px 0;
-  border-radius: 5px;
+  background-color: #FFBB5C;
 }
 
 .btn-menu {
@@ -25,20 +19,17 @@
   padding: 5px 50px;
   border: none;
   border-radius: 5px;
-  background-color: #FF9B50;
 }
-
 .btn-paket:hover {
   color: white;
-  background-color: white;
+  background-color: #ffc676;
 }
 
 .container-pesan {
-  background-color: var(--primary-color);
+  background-color: #ffb043;
   padding: 50px 40px;
   border-radius: 10px;
 }
-
 .container-pesan h5 {
   margin-bottom: 20px;
 }
@@ -46,9 +37,8 @@
 .btn-pesan {
   border: none;
   border-radius: 5px;
-  background-color: #FF9B50;
+  background-color: #ffa629;
 }
-
 .btn-pesan:hover {
   color: white;
   background-color: #be743b;
