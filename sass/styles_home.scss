@@ -88,6 +88,151 @@ $five-color: green;
   
 }  
 
+//   Section Menu
+@function card-background-color($index) {
+  $colors: (#f6671f, #c01b1c);
+  @return nth($colors, $index);
+}
+
+@function button-text-color($hover: false) {
+  @if $hover {
+    @return #f6671f;
+  } @else {
+    @return white;
+  }
+}
+
+.container-menu {
+  background-color: #ea9826;
+  margin-top: 25px;
+}
+
+.card-coloum {
+  display: flex;
+  justify-content: center;
+  background-color: #ea9826;
+
+  .card-menu {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+    .card-count-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      padding: 20px 0px;
+    }
+
+    .card-count {
+      font-weight: bold;
+      font-size: 38px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: auto;
+      margin-right: -50px;
+      padding-right: 25px;
+      overflow: hidden;
+      color: #ffffff;
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+    }
+
+    .card-content {
+      padding: 20px;
+      padding-top: 0px;
+
+      > h2 {
+        margin-top: 0px;
+        text-align: center;
+      }
+    }
+
+    .card-footer {
+      padding: 20px;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      background-image: linear-gradient(90deg, card-background-color(1), card-background-color(2));
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .card-count,
+      .card-footer {
+        background-image: linear-gradient(90deg, card-background-color(1), card-background-color(2));
+      }
+    }
+
+    &:hover {
+      .card-count {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+
+.button-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+
+  .btn-custom {
+    background-color: #f6671f;
+    color: button-text-color();
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: button-background-color(true);
+      color: button-text-color(true);
+    }
+  }
+}
+
+.card-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.container-menu h2 {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.container-menu i.fa-star {
+  background: linear-gradient(90deg, #f6671f, #c01b1c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 // Section About
 .custom-section {
     padding: 60px 0;
@@ -278,148 +423,5 @@ $five-color: green;
     }
   }
   
-//   Section Menu
-@function card-background-color($index) {
-    $colors: (#f6671f, #c01b1c);
-    @return nth($colors, $index);
-  }
 
-  @function button-text-color($hover: false) {
-    @if $hover {
-      @return #f6671f;
-    } @else {
-      @return white;
-    }
-  }
-  
-  .container-menu {
-    background-color: #ea9826;
-    margin-top: 25px;
-  }
-  
-  .card-coloum {
-    display: flex;
-    justify-content: center;
-    background-color: #ea9826;
-  
-    .card-menu {
-      margin: 20px;
-      border-radius: 10px;
-      background-color: #ffffff;
-      overflow: hidden;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  
-      .card-count-container {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 100px;
-        padding: 20px 0px;
-      }
-  
-      .card-count {
-        font-weight: bold;
-        font-size: 38px;
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        margin: auto;
-        margin-right: -50px;
-        padding-right: 25px;
-        overflow: hidden;
-        color: #ffffff;
-        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-        transition: all 0.2s ease-in-out;
-  
-        &:hover {
-          transform: scale(1.1);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-          transition: transform 0.2s, box-shadow 0.2s;
-        }
-      }
-  
-      .card-content {
-        padding: 20px;
-        padding-top: 0px;
-  
-        > h2 {
-          margin-top: 0px;
-          text-align: center;
-        }
-      }
-  
-      .card-footer {
-        padding: 20px;
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 20px;
-        text-align: center;
-        background-image: linear-gradient(90deg, card-background-color(1), card-background-color(2));
-      }
-  
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
-        .card-count,
-        .card-footer {
-          background-image: linear-gradient(90deg, card-background-color(1), card-background-color(2));
-        }
-      }
-  
-      &:hover {
-        .card-count {
-          width: 100px;
-          height: 100px;
-        }
-      }
-    }
-  
-    @media (max-width: 767px) {
-      flex-wrap: wrap;
-    }
-  }
-  
-  .button-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-  
-    .btn-custom {
-      background-color: #f6671f;
-      color: button-text-color();
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 30px;
-  
-      &:hover {
-        background-color: button-background-color(true);
-        color: button-text-color(true);
-      }
-    }
-  }
-  
-  .card-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .container-menu h2 {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding-top: 40px;
-  }
-  
-  .container-menu i.fa-star {
-    background: linear-gradient(90deg, #f6671f, #c01b1c);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
   
