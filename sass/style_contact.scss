@@ -1,0 +1,74 @@
+.container-contact{
+    background-color: #FFBB5C; /* Ganti warna latar belakang header sesuai keinginan */
+    color: black; /* Warna teks header */
+    width: 100%;
+}
+
+.card-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin: 80px;
+    padding: 30px 0;
+    border-radius: 10px;
+    width: 500px;
+    position: relative; /* Diperlukan agar kita bisa mengubah posisi teks saat dihover */
+    transition: transform 0.3s ease-in-out; /* Transisi untuk perubahan transformasi */
+}
+
+.col.card-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Ini untuk mengatur teks menjadi tengah */
+}
+
+.contact-text {
+    margin-top: 10px;
+    /* Sesuaikan dengan jarak yang Anda inginkan antara gambar dan teks */
+    font-weight: 500;
+    font-weight: bold;
+}
+
+@media (max-width : 576px){
+    .img-contact{
+        padding: 90px 0px 60px;
+        margin: 10px;
+    }
+    .container-contact{
+        padding: 20px 20px;
+        font-size: 12px;
+        width: 400px;
+        border-radius: 7px;
+    }
+    iframe{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width : 992px){
+    .col.card-contact{
+        margin: 20px 10px 10px 10px;
+        width: auto;
+    }
+}
+
+/* Transisi dan animasi saat hover pada class card-contact */
+
+.card-contact:hover {
+    transform: scale(1.1); /* Memperbesar elemen saat dihover */
+    box-shadow: 0px 0px 30px white;
+}
+
+/* Animasi pada teks saat hover */
+.card-contact:hover .contact-text {
+    opacity: 1; /* Menampilkan teks dengan efek fade-in saat dihover */
+}
+
+/* Gaya teks awal (tanpa animasi) */
+.contact-text { 
+    transition: opacity 0.3s ease-in-out; /* Transisi untuk efek fade-in */
+}
