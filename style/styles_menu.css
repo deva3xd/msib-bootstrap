@@ -1,18 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-/* menu */
-.wrapper-menu {
-  margin: 0 5px;
-  padding: 10px 0;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-}
-
-.wrapper-paket {
-  margin: 0 5px;
-  padding: 10px 0;
-  border-radius: 5px;
-}
-
 .btn-menu {
   padding: 5px 50px;
   border: none;
@@ -25,33 +10,38 @@
   padding: 5px 50px;
   border: none;
   border-radius: 5px;
-  background-color: #FF9B50;
+  background-color: #ffbd61;
 }
-
 .btn-paket:hover {
   color: white;
-  background-color: white;
-}
-
-.container-pesan {
-  background-color: var(--primary-color);
-  padding: 50px 40px;
-  border-radius: 10px;
-}
-
-.container-pesan h5 {
-  margin-bottom: 20px;
+  background-color: #ffa629;
 }
 
 .btn-pesan {
   border: none;
   border-radius: 5px;
-  background-color: #FF9B50;
+  background-color: #ffbd61;
 }
-
 .btn-pesan:hover {
   color: white;
-  background-color: #be743b;
+  background-color: #ffb043;
+}
+
+/* menu */
+.wrapper-menu {
+  margin: 0 5px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #FFBB5C;
+}
+
+.container-pesan {
+  background-color: #FFBB5C;
+  padding: 50px 40px;
+  border-radius: 10px;
+}
+.container-pesan h5 {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=styles_menu.css.map */
