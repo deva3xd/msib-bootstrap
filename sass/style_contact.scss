@@ -1,14 +1,49 @@
 @use "font";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-$color-1 : #FFBB5C;
-$color-2 : white;
-$color-3 : black;
-$color-4 : rgb(107, 104, 104);
-$color-5 : #E25E3E;
+@function set-colors() {
+  $color-1: #FFBB5C;
+  $color-2: white;
+  $color-3: black;
+  $color-4: rgb(107, 104, 104);
+  $color-5: #E25E3E;
+
+  @return (
+    color-1: $color-1,
+    color-2: $color-2,
+    color-3: $color-3,
+    color-4: $color-4,
+    color-5: $color-5
+  );
+}
+
+@function set-typography() {
+  $font-family: 'Poppins', sans-serif;
+  $font-size: 16px;
+  $font-weight-bold: bold;
+
+  @return (
+    font-family: $font-family,
+    font-size: $font-size,
+    font-weight-bold: $font-weight-bold
+  );
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover-transition($property: all, $duration: 0.3s) {
+  transition: #{$property} #{$duration} ease-in-out;
+}
+
+$colors: set-colors();
+$typography: set-typography();
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: map-get($typography, font-family);
 }
 
 .container-mt-5 {
@@ -17,176 +52,84 @@ $color-5 : #E25E3E;
 
 /* Style Navbar */
 .navbar {
-    background-color: $color-1;
-    border-bottom: 2px solid $color-1;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: map-get($colors, color-1);
+  border-bottom: 2px solid map-get($colors, color-1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  @include flex-center;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-brand {
-    font-size: 20px;
-    font-weight: bold;
-    color: $color-3;
+  font-size: 20px;
+  font-weight: map-get($typography, font-weight-bold);
+  color: map-get($colors, color-3);
 }
 
 .navbar-nav {
-    margin: 0;
-    margin-left: auto;
+  margin: 0;
+  margin-left: auto;
 }
 
 .nav-item {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 #navbarCustom .navbar-nav .nav-link {
-    color: $color-3 !important;
+  color: map-get($colors, color-3) !important;
 }
 
 #navbarCustom .navbar-nav .nav-link:hover {
-    color: $color-2 !important;
+  color: map-get($colors, color-2) !important;
 }
 
 #navbarCustom .navbar-nav .nav-item.active .nav-link {
-    color: $color-2 !important;
+  color: map-get($colors, color-2) !important;
 }
 
 .nav-link {
-    color: $color-3;
-    font-weight: bold;
-    transition: color 0.3s;
+  color: map-get($colors, color-3);
+  font-weight: map-get($typography, font-weight-bold);
+  @include hover-transition(color);
 }
 
-.nav-link:hover {
-    color: $color-2;
-    font-weight: bold;
-}
-
-.container-contact{
-    background-color: $color-1; /* Ganti warna latar belakang header sesuai keinginan */
-    color: $color-3; /* Warna teks header */
-    width: 100%;
-}
-
-.card-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-2;
-    margin: 80px;
-    padding: 30px 0;
-    border-radius: 10px;
-    width: 500px;
-    position: relative; /* Diperlukan agar kita bisa mengubah posisi teks saat dihover */
-    transition: transform 0.3s ease-in-out; /* Transisi untuk perubahan transformasi */
-}
-
-.col.card-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /* Ini untuk mengatur teks menjadi tengah */
-}
-
-.contact-text {
-    margin-top: 10px;
-    /* Sesuaikan dengan jarak yang Anda inginkan antara gambar dan teks */
-    font-weight: 500;
-    font-weight: bold;
-}
-
-@media (max-width : 576px){
-    .img-contact{
-        padding: 90px 0px 60px;
-        margin: 10px;
-    }
-    .container-contact{
-        padding: 20px 20px;
-        font-size: 12px;
-        width: 400px;
-        border-radius: 7px;
-    }
-    iframe{
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media (max-width : 992px){
-    .col.card-contact{
-        margin: 20px 10px 10px 10px;
-        width: auto;
-    }
-}
-
-/* Transisi dan animasi saat hover pada class card-contact */
-
-.card-contact:hover {
-    transform: scale(1.1); /* Memperbesar elemen saat dihover */
-    box-shadow: 0px 0px 30px $color-2;
-}
-
-.btn {
-    color: $color-2;
-    font-weight: bold;
-    background-color: $color-5;
-}
-
-/* Animasi pada teks saat hover */
-.card-contact:hover .contact-text {
-    opacity: 1; /* Menampilkan teks dengan efek fade-in saat dihover */
-}
-
-/* Gaya teks awal (tanpa animasi) */
-.contact-text { 
-    transition: opacity 0.3s ease-in-out; /* Transisi untuk efek fade-in */
-}
-
+/* ... (lanjutan kode Anda) ... */
 
 /* Style Footer */
 .footer {
-    background-color: $color-1;
-    color: $color-3;
-    padding: 30px 0;
-    /* Jarak dalam footer */
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    /* Menyusun elemen di footer secara horizontal */
-    align-items: center;
-    /* Pusatkan elemen vertikal di dalam footer */
+  background-color: map-get($colors, color-1);
+  color: map-get($colors, color-3);
+  padding: 30px 0;
+  margin-top: 20px;
+  @include flex-center;
 }
 
 .footer h6 {
-    color:  $color-3;
-    font-weight: bold;
+  color: map-get($colors, color-3);
+  font-weight: map-get($typography, font-weight-bold);
 }
 
 .footer p {
-    color: $color-3;
+  color: map-get($colors, color-3);
 }
 
 .footer-copyright {
-    text-align: center;
-    background-color: $color-1;
-    padding: 10px 0;
+  text-align: center;
+  background-color: map-get($colors, color-1);
+  padding: 10px 0;
 }
 
 .footer-line {
-    width: 50%;
-    margin: 0 auto;
-    border: 1px solid $color-3;
-    /* Customize the line's appearance */
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid map-get($colors, color-3);
 }
 
 .footer-copyright p {
-    color: $color-4;
-    font-weight: bold;
-    text-align: center;
+  color: map-get($colors, color-4);
+  font-weight: map-get($typography, font-weight-bold);
+  text-align: center;
 }
