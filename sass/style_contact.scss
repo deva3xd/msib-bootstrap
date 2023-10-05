@@ -1,6 +1,19 @@
+@use "font";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 $color-1 : #FFBB5C;
 $color-2 : white;
 $color-3 : black;
+$color-4 : rgb(107, 104, 104);
+$color-5 : #E25E3E;
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-mt-5 {
+  margin-top: 5rem;
+}
 
 /* Style Navbar */
 .navbar {
@@ -13,13 +26,13 @@ $color-3 : black;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    box-shadow: 0 4px 8px $color-3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-brand {
     font-size: 20px;
     font-weight: bold;
-    color: black;
+    color: $color-3;
 }
 
 .navbar-nav {
@@ -32,30 +45,30 @@ $color-3 : black;
 }
 
 #navbarCustom .navbar-nav .nav-link {
-    color: black !important;
+    color: $color-3 !important;
 }
 
 #navbarCustom .navbar-nav .nav-link:hover {
-    color: white !important;
+    color: $color-2 !important;
 }
 
 #navbarCustom .navbar-nav .nav-item.active .nav-link {
-    color: white !important;
+    color: $color-2 !important;
 }
 
 .nav-link {
-    color: black;
+    color: $color-3;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: white;
+    color: $color-2;
     font-weight: bold;
 }
 
 .container-contact{
-    background-color: $color-3; /* Ganti warna latar belakang header sesuai keinginan */
+    background-color: $color-1; /* Ganti warna latar belakang header sesuai keinginan */
     color: $color-3; /* Warna teks header */
     width: 100%;
 }
@@ -116,7 +129,13 @@ $color-3 : black;
 
 .card-contact:hover {
     transform: scale(1.1); /* Memperbesar elemen saat dihover */
-    box-shadow: 0px 0px 30px $color-3;
+    box-shadow: 0px 0px 30px $color-2;
+}
+
+.btn {
+    color: $color-2;
+    font-weight: bold;
+    background-color: $color-5;
 }
 
 /* Animasi pada teks saat hover */
@@ -127,4 +146,47 @@ $color-3 : black;
 /* Gaya teks awal (tanpa animasi) */
 .contact-text { 
     transition: opacity 0.3s ease-in-out; /* Transisi untuk efek fade-in */
+}
+
+
+/* Style Footer */
+.footer {
+    background-color: $color-1;
+    color: $color-3;
+    padding: 30px 0;
+    /* Jarak dalam footer */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Menyusun elemen di footer secara horizontal */
+    align-items: center;
+    /* Pusatkan elemen vertikal di dalam footer */
+}
+
+.footer h6 {
+    color:  $color-3;
+    font-weight: bold;
+}
+
+.footer p {
+    color: $color-3;
+}
+
+.footer-copyright {
+    text-align: center;
+    background-color: $color-1;
+    padding: 10px 0;
+}
+
+.footer-line {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid $color-3;
+    /* Customize the line's appearance */
+}
+
+.footer-copyright p {
+    color: $color-4;
+    font-weight: bold;
+    text-align: center;
 }
