@@ -96,7 +96,84 @@ $typography: set-typography();
   @include hover-transition(color);
 }
 
-/* ... (lanjutan kode Anda) ... */
+.container-contact {
+  background-color: map-get($colors, color-1);
+  color: map-get($colors, color-3);
+  width: 100%;
+}
+
+.card-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: map-get($colors, color-2);
+  margin: 80px;
+  padding: 30px 0;
+  border-radius: 10px;
+  width: 500px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.col.card-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-text {
+  margin-top: 10px;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .img-contact {
+    padding: 90px 0px 60px;
+    margin: 10px;
+  }
+  .container-contact {
+    padding: 20px 20px;
+    font-size: 12px;
+    width: 400px;
+    border-radius: 7px;
+  }
+  iframe {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .col.card-contact {
+    margin: 20px 10px 10px 10px;
+    width: auto;
+  }
+}
+
+/* Transisi dan animasi saat hover pada class card-contact */
+
+.card-contact:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px map-get($colors, color-2);
+}
+
+.btn {
+  color: map-get($colors, color-2);
+  font-weight: bold;
+  background-color: map-get($colors, color-5);
+}
+
+/* Animasi pada teks saat hover */
+.card-contact:hover .contact-text {
+  opacity: 1;
+}
+
+/* Gaya teks awal (tanpa animasi) */
+.contact-text {
+  transition: opacity 0.3s ease-in-out;
+}
 
 /* Style Footer */
 .footer {
