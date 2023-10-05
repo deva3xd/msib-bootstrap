@@ -1,6 +1,62 @@
+$color-1 : #FFBB5C;
+$color-2 : white;
+$color-3 : black;
+
+/* Style Navbar */
+.navbar {
+    background-color: $color-1;
+    border-bottom: 2px solid $color-1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px $color-3;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-nav {
+    margin: 0;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+#navbarCustom .navbar-nav .nav-link {
+    color: black !important;
+}
+
+#navbarCustom .navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+#navbarCustom .navbar-nav .nav-item.active .nav-link {
+    color: white !important;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: white;
+    font-weight: bold;
+}
+
 .container-contact{
-    background-color: #FFBB5C; /* Ganti warna latar belakang header sesuai keinginan */
-    color: black; /* Warna teks header */
+    background-color: $color-3; /* Ganti warna latar belakang header sesuai keinginan */
+    color: $color-3; /* Warna teks header */
     width: 100%;
 }
 
@@ -8,7 +64,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: $color-2;
     margin: 80px;
     padding: 30px 0;
     border-radius: 10px;
@@ -60,7 +116,7 @@
 
 .card-contact:hover {
     transform: scale(1.1); /* Memperbesar elemen saat dihover */
-    box-shadow: 0px 0px 30px white;
+    box-shadow: 0px 0px 30px $color-3;
 }
 
 /* Animasi pada teks saat hover */
