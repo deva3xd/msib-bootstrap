@@ -27,6 +27,30 @@
   background-color: #ffb043;
 }
 
+.font-level-500 {
+  font-weight: 500;
+}
+
+.font-level-700 {
+  font-weight: 700;
+}
+
+.font-level-900 {
+  font-weight: 900;
+}
+
+.tes-btn-menu {
+  padding-top: 5px;
+  padding-left: 10px;
+  background-color: red;
+}
+
+.tes-btn-paket {
+  padding-top: 15px;
+  padding-left: 20px;
+  background-color: red;
+}
+
 /* menu */
 .wrapper-menu {
   margin: 0 5px;
