@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-body {
+* {
   font-family: Poppins, sans-serif;
 }
 
@@ -161,31 +161,6 @@ h2.subtitle::after {
   font-weight: bold;
 }
 
-.background {
-  background-image: url("../assets/banner_hero.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.background .row {
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.693);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 70px;
-}
-.background h1.judul {
-  color: black;
-  font-weight: bold;
-}
-.background .btn {
-  color: white;
-  font-weight: bold;
-  background-color: #E25E3E;
-}
-
 .container-menu {
   background-color: #ea9826;
   margin-top: 25px;
@@ -250,9 +225,18 @@ h2.subtitle::after {
   background-image: linear-gradient(90deg, #f6671f, #c01b1c);
 }
 .card-coloum .card-menu:nth-child(1) .card-count,
-.card-coloum .card-menu:nth-child(1) .card-footer, .card-coloum .card-menu:nth-child(2) .card-count,
-.card-coloum .card-menu:nth-child(2) .card-footer, .card-coloum .card-menu:nth-child(3) .card-count,
-.card-coloum .card-menu:nth-child(3) .card-footer, .card-coloum .card-menu:nth-child(4) .card-count,
+.card-coloum .card-menu:nth-child(1) .card-footer {
+  background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+}
+.card-coloum .card-menu:nth-child(2) .card-count,
+.card-coloum .card-menu:nth-child(2) .card-footer {
+  background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+}
+.card-coloum .card-menu:nth-child(3) .card-count,
+.card-coloum .card-menu:nth-child(3) .card-footer {
+  background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+}
+.card-coloum .card-menu:nth-child(4) .card-count,
 .card-coloum .card-menu:nth-child(4) .card-footer {
   background-image: linear-gradient(90deg, #f6671f, #c01b1c);
 }
@@ -301,6 +285,31 @@ h2.subtitle::after {
   background: linear-gradient(90deg, #f6671f, #c01b1c);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.background {
+  background-image: url("../assets/banner_hero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background .row {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.693);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 70px;
+}
+.background h1.judul {
+  color: black;
+  font-weight: bold;
+}
+.background .btn {
+  color: white;
+  font-weight: bold;
+  background-color: #E25E3E;
 }
 
 .custom-section {
