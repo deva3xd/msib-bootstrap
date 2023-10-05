@@ -1,6 +1,35 @@
 @use 'colors' as c;
 @import 'buttonMenu';
 
+// perulangan
+$sizes: 500, 700, 900;
+
+@each $size in $sizes {
+    .font-level-#{$size} {
+        font-weight: $size;
+    }
+}
+
+// kondisi
+@mixin btn-tes($padding-y, $padding-x, $menu) {
+    @if $menu {
+        padding-top: $padding-y;
+        padding-left: $padding-x;
+        background-color: red;
+    } @else {
+        padding-top: $padding-y;
+        padding-left: $padding-x;
+        background-color: orange;
+    }
+}
+
+.tes-btn-menu {
+    @include btn-tes(5px, 10px, $menu: true);
+}
+.tes-btn-paket {
+    @include btn-tes(15px, 20px, $menu: true);
+}
+
 /* menu */
 .wrapper-menu {
     margin: 0 5px;
