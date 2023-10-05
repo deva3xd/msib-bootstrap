@@ -2,12 +2,12 @@
 @import 'sectionMelayani';
 @import 'sectionFooter';
 
+
 $primary-color: #FFBB5C;
 $secondary-color: #E25E3E;
 $third-color: white;
 $fourth-color: black;
 $five-color: green;
-
 
 .navbar {
     background-color: $primary-color;
@@ -61,34 +61,34 @@ $five-color: green;
   }
 
 // Hero
-.background {
-    background-image: url('../assets/banner_hero.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+// .background {
+//     background-image: url('../assets/banner_hero.png');
+//     background-position: center;
+//     background-size: cover;
+//     background-repeat: no-repeat;
 
-    .row {
-        display: flex;
-        background-color: rgba(255, 255, 255, 0.693);
-        border-radius: 12px;
-        border: 1px solid rgba(209, 213, 219, 0.3);
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-top: 70px;
-    }
+//     .row {
+//         display: flex;
+//         background-color: rgba(255, 255, 255, 0.693);
+//         border-radius: 12px;
+//         border: 1px solid rgba(209, 213, 219, 0.3);
+//         padding-left: 15px;
+//         padding-right: 15px;
+//         margin-top: 70px;
+//     }
 
-    h1.judul {
-        color: $fourth-color;
-        font-weight: bold;
-    }
+//     h1.judul {
+//         color: $fourth-color;
+//         font-weight: bold;
+//     }
 
-    .btn {
-        color: $third-color;
-        font-weight: bold;
-        background-color: $secondary-color;
-    }
+//     .btn {
+//         color: $third-color;
+//         font-weight: bold;
+//         background-color: $secondary-color;
+//     }
   
-}  
+// }  
 
 //   Section Menu
 @function card-background-color($index) {
