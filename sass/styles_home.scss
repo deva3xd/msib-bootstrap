@@ -58,37 +58,43 @@ $five-color: green;
   .nav-link:hover {
     color: $third-color;
     font-weight: bold;
-  }
+  } 
 
-// Hero
-// .background {
-//     background-image: url('../assets/banner_hero.png');
-//     background-position: center;
-//     background-size: cover;
-//     background-repeat: no-repeat;
+  // Hero
+$primary-color: #FFBB5C;
+$secondary-color: #E25E3E;
+$third-color: white;
+$fourth-color: black;
+$five-color: green;
 
-//     .row {
-//         display: flex;
-//         background-color: rgba(255, 255, 255, 0.693);
-//         border-radius: 12px;
-//         border: 1px solid rgba(209, 213, 219, 0.3);
-//         padding-left: 15px;
-//         padding-right: 15px;
-//         margin-top: 70px;
-//     }
+.background {
+    background-image: url('../assets/banner_hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-//     h1.judul {
-//         color: $fourth-color;
-//         font-weight: bold;
-//     }
+    .row {
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.693);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 70px;
+    }
 
-//     .btn {
-//         color: $third-color;
-//         font-weight: bold;
-//         background-color: $secondary-color;
-//     }
+    h1.judul {
+        color: $fourth-color;
+        font-weight: bold;
+    }
+
+    .btn {
+        color: $third-color;
+        font-weight: bold;
+        background-color: $secondary-color;
+    }
   
-// }  
+} 
 
 //   Section Menu
 @function card-background-color($index) {
