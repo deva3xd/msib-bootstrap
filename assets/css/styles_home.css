@@ -1,57 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-.navbar {
-  background-color: #FFBB5C;
-  border-bottom: 2px solid #FFBB5C;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.navbar-brand {
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-}
-
-.navbar-nav {
-  margin: 0;
-  margin-left: auto;
-}
-
-.nav-item {
-  margin-right: 10px;
-}
-
-#navbarCustom .navbar-nav .nav-link {
-  color: black !important;
-}
-
-#navbarCustom .navbar-nav .nav-link:hover {
-  color: white !important;
-}
-
-#navbarCustom .navbar-nav .nav-item.active .nav-link {
-  color: white !important;
-}
-
-.nav-link {
-  color: black;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: white;
-  font-weight: bold;
-}
-
 .background {
-  background-image: url("../assets/banner_hero.png");
+  background-image: url("../img/banner_hero.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
