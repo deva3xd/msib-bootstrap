@@ -1,49 +1,83 @@
 @use 'colors' as c;
-@import 'buttonMenu';
 
-// perulangan
-$sizes: 500, 700, 900;
-
-@each $size in $sizes {
-    .font-level-#{$size} {
-        font-weight: $size;
-    }
+@function color-lighten($color, $val) {
+    $lighten : lighten($color, $val);
+    @return $lighten;
 }
 
-// kondisi
-@mixin btn-tes($padding-y, $padding-x, $menu) {
-    @if $menu {
-        padding-top: $padding-y;
-        padding-left: $padding-x;
-        background-color: red;
-    } @else {
-        padding-top: $padding-y;
-        padding-left: $padding-x;
-        background-color: orange;
-    }
-}
-
-.tes-btn-menu {
-    @include btn-tes(5px, 10px, $menu: true);
-}
-.tes-btn-paket {
-    @include btn-tes(15px, 20px, $menu: true);
+@function color-darken($color, $val) {
+    $darken : darken($color, $val);
+    @return $darken;
 }
 
 /* menu */
-.wrapper-menu {
-    margin: 0 5px;
-    padding: 10px 0;
-    border-radius: 5px;
-    background-color: c.$primary-color;
+#menu {
+    margin-top: 80px;
+    padding: 15px;
 }
 
-.container-pesan {
+#paket {
+    padding: 15px;
     background-color: c.$primary-color;
-    padding: 50px 40px;
-    border-radius: 10px;
 
-    h5 {
-        margin-bottom: 20px;
+    .btn-paket {
+        width: 100%;
+        padding: 5px 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: c.$primary-color;
+    
+        &:hover {
+            color: #ffff;
+            background-color: color-darken(c.$primary-color, 10%);
+        }
+    }
+
+    .swiper-btn {
+        padding: 30px;
+        border: 2px solid #ffff;
+        border-radius: 100%;
+        color: #ffff;
+        background-color: c.$primary-color;
+    }
+
+    .custom-card {
+        width: 16rem;
+        background-color: #ffff;
+        border-radius: 10px;
+        border: 2px solid white;
+
+        .custom-card-img {
+            border-radius: 10px;
+        }
+    }
+}
+
+#cta {
+    padding-top: 15px;
+
+    .container-pesan {
+        padding: 50px 40px;
+        border-radius: 10px;
+        background-color: c.$primary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h5 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .btn-pesan {
+        border: none;
+        border-radius: 5px;
+        background-color: c.$secondary-color;
+    
+        &:hover {
+            color: #ffff;
+            background-color: color-darken(c.$secondary-color, 10%);
+        }
     }
 }
