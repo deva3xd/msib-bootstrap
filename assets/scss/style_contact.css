@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@use "font";
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container-mt-5 {
+  margin-top: 5rem;
+}
+
+/* Style Navbar */
+.navbar {
+  background-color: #FFBB5C;
+  border-bottom: 2px solid #FFBB5C;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-nav {
+  margin: 0;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+#navbarCustom .navbar-nav .nav-link {
+  color: black !important;
+}
+
+#navbarCustom .navbar-nav .nav-link:hover {
+  color: white !important;
+}
+
+#navbarCustom .navbar-nav .nav-item.active .nav-link {
+  color: white !important;
+}
+
+.nav-link {
+  color: black;
+  font-weight: bold;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.container-contact {
+  background-color: #FFBB5C;
+  color: black;
+  width: 100%;
+}
+
+.card-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin: 80px;
+  padding: 30px 0;
+  border-radius: 10px;
+  width: 500px;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.col.card-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contact-text {
+  margin-top: 10px;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .img-contact {
+    padding: 90px 0px 60px;
+    margin: 10px;
+  }
+  .container-contact {
+    padding: 20px 20px;
+    font-size: 12px;
+    width: 400px;
+    border-radius: 7px;
+  }
+  iframe {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .col.card-contact {
+    margin: 20px 10px 10px 10px;
+    width: auto;
+  }
+}
+
+/* Transisi dan animasi saat hover pada class card-contact */
+.card-contact:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 30px white;
+          box-shadow: 0px 0px 30px white;
+}
+
+.btn {
+  color: white;
+  font-weight: bold;
+  background-color: #E25E3E;
+}
+
+/* Animasi pada teks saat hover */
+.card-contact:hover .contact-text {
+  opacity: 1;
+}
+
+/* Gaya teks awal (tanpa animasi) */
+.contact-text {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Style Footer */
+.footer {
+  background-color: #FFBB5C;
+  color: black;
+  padding: 30px 0;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer h6 {
+  color: black;
+  font-weight: bold;
+}
+
+.footer p {
+  color: black;
+}
+
+.footer-copyright {
+  text-align: center;
+  background-color: #FFBB5C;
+  padding: 10px 0;
+}
+
+.footer-line {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.footer-copyright p {
+  color: #6b6868;
+  font-weight: bold;
+  text-align: center;
+}
+/*# sourceMappingURL=style_contact.css.map */

@@ -1,0 +1,82 @@
+.mt-5 h2 {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.menu-card {
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu-card img {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-card .card-body {
+    text-align: center;
+}
+
+.menu-card .card-title {
+    font-weight: bold;
+}
+
+.menu-card .card-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.menu-card .btn-primary {
+    background-color: #E25E3E;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.menu-card .btn-primary:hover {
+    background-color: #E25E3E;
+}
+
+/* CSS untuk form pemesanan */
+.form-container {
+    background-color: #FFBB5C;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* CSS untuk tombol "Pesan Sekarang" dalam form pemesanan */
+.form-container .btn-primary {
+    background-color: #E25E3E;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.form-container .btn-primary:hover {
+    background-color: #E25E3E;
+}
+
+/* CSS untuk tombol tanpa perubahan warna saat di hover */
+.btn-primary:not(.disabled):not([disabled]):active,
+.btn-primary:not(.disabled):not([disabled]).active {
+    background-color: #E25E3E;
+}
+
+.btn-primary:not(.disabled):not([disabled]):active:focus,
+.btn-primary:not(.disabled):not([disabled]).active:focus,
+.btn-primary:focus {
+    box-shadow: none;
+    background-color: #E25E3E;
+}

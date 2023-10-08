@@ -1,0 +1,33 @@
+@use 'colors' as c;
+
+@function color-lighten($color, $val) {
+  $lighten : lighten($color, $val);
+  @return $lighten;
+}
+
+@function color-darken($color, $val) {
+  $darken : darken($color, $val);
+  @return $darken;
+}
+
+.outer-box-about {
+  width: 95%;
+  margin: 20px auto;
+  background-color: c.$primary-color;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card {
+  background-color: c.$primary-color;
+  padding: 20px;
+  margin-right: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-section {
+  padding-top: 100px;
+}

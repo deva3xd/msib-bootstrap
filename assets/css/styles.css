@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #FFBB5C;
+    border-bottom: 2px solid #FFBB5C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-nav {
+    margin: 0;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+#navbarCustom .navbar-nav .nav-link {
+    color: black !important;
+}
+
+#navbarCustom .navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+#navbarCustom .navbar-nav .nav-item.active .nav-link {
+    color: white !important;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: white;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #FFBB5C;
+    color: rgb(0, 0, 0);
+    padding: 30px 0;
+    /* Jarak dalam footer */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Menyusun elemen di footer secara horizontal */
+    align-items: center;
+    /* Pusatkan elemen vertikal di dalam footer */
+}
+
+.footer h6 {
+    color: black;
+    font-weight: bold;
+}
+
+.footer p {
+    color: black;
+}
+
+.footer-copyright {
+    text-align: center;
+    background-color: #FFBB5C;
+    padding: 10px 0;
+}
+
+.footer-line {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    /* Customize the line's appearance */
+}
+
+.footer-copyright p {
+    color: rgb(107, 104, 104);
+    font-weight: bold;
+    text-align: center;
+}

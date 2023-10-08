@@ -1,0 +1,64 @@
+/* menu */
+#menu {
+  margin-top: 80px;
+  padding: 15px;
+}
+
+#paket {
+  padding: 15px;
+  background-color: #FFBB5C;
+}
+#paket .btn-paket {
+  width: 100%;
+  padding: 5px 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #FFBB5C;
+}
+#paket .btn-paket:hover {
+  color: white;
+  background-color: #ffa629;
+}
+#paket .swiper-btn {
+  padding: 30px;
+  border: 2px solid white;
+  border-radius: 100%;
+  color: white;
+  background-color: #FFBB5C;
+}
+#paket .custom-card {
+  width: 16rem;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+#paket .custom-card .custom-card-img {
+  border-radius: 10px;
+}
+
+#cta {
+  padding-top: 15px;
+}
+#cta .container-pesan {
+  padding: 50px 40px;
+  border-radius: 10px;
+  background-color: #FFBB5C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cta .container-pesan h5 {
+  margin-bottom: 20px;
+}
+#cta .btn-pesan {
+  border: none;
+  border-radius: 5px;
+  background-color: #E25E3E;
+}
+#cta .btn-pesan:hover {
+  color: white;
+  background-color: #ce411f;
+}
+
+/*# sourceMappingURL=styles_menu.css.map */

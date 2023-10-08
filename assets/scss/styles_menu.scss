@@ -1,0 +1,83 @@
+@use 'colors' as c;
+
+@function color-lighten($color, $val) {
+    $lighten : lighten($color, $val);
+    @return $lighten;
+}
+
+@function color-darken($color, $val) {
+    $darken : darken($color, $val);
+    @return $darken;
+}
+
+/* menu */
+#menu {
+    margin-top: 80px;
+    padding: 15px;
+}
+
+#paket {
+    padding: 15px;
+    background-color: c.$primary-color;
+
+    .btn-paket {
+        width: 100%;
+        padding: 5px 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: c.$primary-color;
+    
+        &:hover {
+            color: #ffff;
+            background-color: color-darken(c.$primary-color, 10%);
+        }
+    }
+
+    .swiper-btn {
+        padding: 30px;
+        border: 2px solid #ffff;
+        border-radius: 100%;
+        color: #ffff;
+        background-color: c.$primary-color;
+    }
+
+    .custom-card {
+        width: 16rem;
+        background-color: #ffff;
+        border-radius: 10px;
+        border: 2px solid white;
+
+        .custom-card-img {
+            border-radius: 10px;
+        }
+    }
+}
+
+#cta {
+    padding-top: 15px;
+
+    .container-pesan {
+        padding: 50px 40px;
+        border-radius: 10px;
+        background-color: c.$primary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h5 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .btn-pesan {
+        border: none;
+        border-radius: 5px;
+        background-color: c.$secondary-color;
+    
+        &:hover {
+            color: #ffff;
+            background-color: color-darken(c.$secondary-color, 10%);
+        }
+    }
+}

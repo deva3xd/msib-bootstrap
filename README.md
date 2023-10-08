@@ -2,7 +2,7 @@
 # Masakan Minang Padang
 
 Aplikasi pemesanan makanan secara online melalui website.
-## Authors
+## Kelompok 5
 
 - [@deva3xd](https://www.github.com/deva3xd) -> Menu
 - [@AldiHasan123Dev](https://www.github.com/AldiHasan123Dev) -> Contact
