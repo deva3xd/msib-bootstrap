@@ -8,10 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/styles_order.css" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles_order.css" />
     <title>Order | Minang Raya Kesamben</title>
-    <link rel="icon" href="./assets/img/logo.png" />
+    <link rel="icon" href="./assets/logo.png" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -31,94 +30,81 @@
         <h1 class="text-bold mt-5 pt-5">Daftar Menu Box Catering</h1>
         <div class="container w-100 d-flex justify-content-center">
             <div class="row mx-auto`">
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card menu-card h-75 w-100">
-                        <img src="./assets/img/paket1.jpeg" alt="Menu 1" class="card-img-top">
+                        <img src="assets/img/paket5.jpeg" alt="Menu 1" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Paket Box 1 (Rendang Ayam)</h5>
                             <p class="card-text">Harga: Rp 30,000</p>
-                            <a href="#" class="btn btn-primary"
-                                onclick="showMenuDetails('Paket Box 1', 'Rp 30,000')">Lihat
-                                Detail</a>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card menu-card h-75 w-100">
-                        <img src="./assets/img/paket2.jpeg" alt="Menu 2" class="card-img-top">
+                        <img src="assets//img/paket5.jpeg" alt="Menu 2" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Paket Box 2 (Gulai)</h5>
                             <p class="card-text">Harga: Rp 35,000</p>
-                            <a href="#" class="btn btn-primary"
-                                onclick="showMenuDetails('Paket Box 2', 'Rp 35,000')">Lihat
-                                Detail</a>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card menu-card h-75 w-100">
-                        <img src="./assets/img/paket1.jpeg" alt="Menu 3" class="card-img-top">
+                        <img src="assets/img/paket4.jpeg" alt="Menu 3" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Paket Box 3 (Ayam)</h5>
                             <p class="card-text">Harga: Rp 25,000</p>
-                            <a href="#" class="btn btn-primary"
-                                onclick="showMenuDetails('Paket Box 3', 'Rp 25,000')">Lihat
-                                Detail</a>
+                            
                         </div>
                     </div>
                 </div>
-
-                <div class="col-4">
+                
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card menu-card h-75 w-100">
-                        <img src="./assets/img/paket4.jpeg" alt="Menu 3" class="card-img-top">
+                        <img src="assets/img/paket4.jpeg" alt="Menu 3" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Paket Box 4(Ayam)</h5>
                             <p class="card-text">Harga: Rp 25,000</p>
-                            <a href="#" class="btn btn-primary"
-                                onclick="showMenuDetails('Paket Box 3', 'Rp 25,000')">Lihat
-                                Detail</a>
+                            
                         </div>
                     </div>
                 </div>
-
-                <div class="col-4">
+                
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card menu-card h-75 w-100">
-                        <img src="./assets/img/paket5.jpeg" alt="Menu 3" class="card-img-top">
+                        <img src="assets/img/paket5.jpeg" alt="Menu 3" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Paket Box 5 (Telur Dadar)</h5>
                             <p class="card-text">Harga: Rp 25,000</p>
-                            <a href="#" class="btn btn-primary"
-                                onclick="showMenuDetails('Paket Box 3', 'Rp 25,000')">Lihat
-                                Detail</a>
+                            
                         </div>
                     </div>
                 </div>
-
-                <div class="col-4">
+                
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card menu-card h-75 w-100">
-                        <img src="./assets/img/paket3.jpeg" alt="Menu 3" class="card-img-top">
+                        <img src="assets//img/paket4.jpeg" alt="Menu 3" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Paket Box 6 (Rendang Daging)</h5>
                             <p class="card-text">Harga: Rp 25,000</p>
-                            <a href="#" class="btn btn-primary"
-                                onclick="showMenuDetails('Paket Box 3', 'Rp 25,000')">Lihat
-                                Detail</a>
+                            
                         </div>
                     </div>
                 </div>
+                
             </div>
             <!-- Tambahkan menu lainnya sesuai kebutuhan -->
         </div>
     </div>
 
-    <script>
-        function showMenuDetails(nama, harga) {
-            // Membuat pesan pop-up
-            alert('Detail Paket Makanan\nNama: ' + nama + '\nHarga: ' + harga);
-        }
-    </script>
-
-    <div class="container mt-2 form-container">
+    
+    
+	<!-- akhir dari popup -->
+    <div class="container mt-5 form-container">
         <h2 class="text-center">Pemesanan Makanan</h2>
         <form action="proses_pemesanan.php" method="post">
             <div class="row">
@@ -168,10 +154,11 @@
                 </div>
             </div>
             <div class="form-group text-center mt-3">
-                <a href="https://wa.me/+6281334554427?text=Hallo%20Saya%20ingin%20mengorder" target="_blank" class="btn btn-primary">Pesan Sekarang</a>
+                <a href="https://wa.me/1234567890?text=Saya%20ingin%20mengorder" target="_blank" class="btn btn-primary">Pesan Sekarang</a>
             </div>
         </form>
     </div>
+    
     <!-- content end -->
 
     <!-- footer -->
