@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-<<<<<<< HEAD:style/styles_home.css
 * {
   font-family: Poppins, sans-serif;
 }
@@ -288,8 +287,6 @@ h2.subtitle::after {
   color: transparent;
 }
 
-=======
->>>>>>> c7983e3bb205a2ff00d0e22cbdd25f7bd740863d:assets/css/styles_home.css
 .background {
   background-image: url("../img/banner_hero.png");
   background-position: center;
