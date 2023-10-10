@@ -1,7 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   font-family: Poppins, sans-serif;
+}
+
+.footer {
+  background-color: #FFBB5C;
+  color: rgb(0, 0, 0);
+  padding: 30px 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer h6 {
+  color: black;
+  font-weight: bold;
+}
+.footer p {
+  color: black;
+}
+
+.footer-copyright {
+  text-align: center;
+  background-color: #FFBB5C;
+  padding: 10px 0;
+}
+.footer-copyright .footer-line {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.footer-copyright p {
+  color: rgb(107, 104, 104);
+  font-weight: bold;
+  text-align: center;
 }
 
 * {
