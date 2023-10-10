@@ -124,28 +124,6 @@
   font-weight: bold;
 }
 
-@media (max-width: 576px) {
-  .img-contact {
-    padding: 90px 0px 60px;
-    margin: 10px;
-  }
-  .container-contact {
-    padding: 20px 20px;
-    font-size: 12px;
-    width: 400px;
-    border-radius: 7px;
-  }
-  iframe {
-    width: 300px;
-    height: 300px;
-  }
-}
-@media (max-width: 992px) {
-  .col.card-contact {
-    margin: 20px 10px 10px 10px;
-    width: auto;
-  }
-}
 /* Transisi dan animasi saat hover pada class card-contact */
 .card-contact:hover {
   transform: scale(1.1);
@@ -204,6 +182,30 @@
   color: rgb(107, 104, 104);
   font-weight: bold;
   text-align: center;
+}
+
+.container-contact-1 {
+  width: 100px;
+}
+
+.container-contact-2 {
+  width: 200px;
+}
+
+.container-contact-3 {
+  width: 300px;
+}
+
+.container-contact-4 {
+  width: 400px;
+}
+
+.container-contact-5 {
+  width: 500px;
+}
+
+.my-text {
+  color: #FFBB5C;
 }
 
 /*# sourceMappingURL=style_contact.css.map */

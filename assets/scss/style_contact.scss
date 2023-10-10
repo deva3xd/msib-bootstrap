@@ -1,5 +1,6 @@
 @use "font";
 @import "sectionFooter";
+
 @function set-colors() {
   $color-1: #FFBB5C;
   $color-2: white;
@@ -127,30 +128,6 @@ $typography: set-typography();
   font-weight: bold;
 }
 
-@media (max-width: 576px) {
-  .img-contact {
-    padding: 90px 0px 60px;
-    margin: 10px;
-  }
-  .container-contact {
-    padding: 20px 20px;
-    font-size: 12px;
-    width: 400px;
-    border-radius: 7px;
-  }
-  iframe {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 992px) {
-  .col.card-contact {
-    margin: 20px 10px 10px 10px;
-    width: auto;
-  }
-}
-
 /* Transisi dan animasi saat hover pada class card-contact */
 
 .card-contact:hover {
@@ -209,3 +186,27 @@ $typography: set-typography();
   font-weight: map-get($typography, font-weight-bold);
   text-align: center;
 }
+
+// Perulangan untuk membuat kelas .container-contact dengan lebar yang berbeda
+@for $i from 1 through 5 {
+  .container-contact-#{$i} {
+    width: 100px * $i;
+  }
+}
+
+// Kondisi untuk mengubah warna teks berdasarkan kondisi tertentu
+@mixin conditional-text-color($condition) {
+  @if $condition == "primary" {
+    color: map-get($colors, color-1);
+  } @else if $condition == "secondary" {
+    color: map-get($colors, color-2);
+  } @else {
+    color: map-get($colors, color-3);
+  }
+}
+
+// Penggunaan mixin conditional-text-color
+.my-text {
+  @include conditional-text-color("primary"); // Contoh penggunaan
+}
+
