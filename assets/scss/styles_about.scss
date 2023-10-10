@@ -31,6 +31,16 @@
 $colors: set-colors();
 $typography: set-typography();
 
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover-transition($property: all, $duration: 0.3s) {
+  transition: #{$property} #{$duration} ease-in-out;
+}
+
 
 .outer-box-about {
   width: 95%;
