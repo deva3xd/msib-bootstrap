@@ -115,4 +115,24 @@
   height: auto;
   border-radius: 5px;
 }
+
+.container-contact-1 {
+  width: 100px;
+}
+
+.container-contact-2 {
+  width: 200px;
+}
+
+.container-contact-3 {
+  width: 300px;
+}
+
+.container-contact-4 {
+  width: 400px;
+}
+
+.container-contact-5 {
+  width: 500px;
+}
 /*# sourceMappingURL=styles_about.css.map */

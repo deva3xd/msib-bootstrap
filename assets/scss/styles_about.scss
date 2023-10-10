@@ -151,3 +151,19 @@ $typography: set-typography();
   height: auto;
   border-radius: 5px;
 }
+
+@for $i from 1 through 5 {
+  .container-contact-#{$i} {
+    width: 100px * $i;
+  }
+}
+
+@mixin conditional-text-color($condition) {
+  @if $condition == "primary" {
+    color: map-get($colors, color-1);
+  } @else if $condition == "secondary" {
+    color: map-get($colors, color-2);
+  } @else {
+    color: map-get($colors, color-3);
+  }
+}
