@@ -1,162 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-* {
-  font-family: "Poppins", sans-serif;
-}
+/* Error: Undefined variable.
+ *     ,
+ * 169 | @for $i from 1 through length($menu-items) {
+ *     |                               ^^^^^^^^^^^
+ *     '
+ *   assets\scss\styles_order.scss 169:31  root stylesheet */
 
-/* Gaya untuk Navbar */
-.navbar {
-  background-color: #FFBB5C;
-  border-bottom: 2px solid #FFBB5C;
-  position: fixed; /* Membuat navbar tetap */
-  top: 0; /* Menempatkan navbar di bagian atas */
-  width: 100%; /* Lebar 100% */
-  z-index: 1000; /* Menempatkan navbar di atas konten */
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0; /* Mengatur jarak atas dan bawah */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a     \2577 \a 169 \2502  @for $i from 1 through length($menu-items) {\d\a     \2502                                ^^^^^^^^^^^\a     \2575 \a   assets\\scss\\styles_order.scss 169:31  root stylesheet";
 }
-
-.navbar-brand {
-  font-size: 20px; /* Ukuran teks logo */
-  font-weight: bold; /* Ketebalan teks logo */
-  color: black;
-}
-
-.navbar-nav {
-  margin: 0;
-  margin-left: auto;
-}
-
-.nav-item {
-  margin-right: 10px; /* Jarak antar item menu */
-}
-
-#navbarCustom .navbar-nav .nav-link {
-  color: black !important;
-}
-
-#navbarCustom .navbar-nav .nav-link:hover {
-  color: white !important;
-}
-
-#navbarCustom .navbar-nav .nav-item.active .nav-link {
-  color: white !important;
-}
-
-.nav-link {
-  color: black;
-  font-weight: bold; /* Teks tebal */
-  transition: color 0.3s; /* Efek transisi warna saat dihover */
-}
-
-.nav-link:hover {
-  color: white;
-  font-weight: bold; /* Membuat teks tebal saat dihover */
-}
-
-/* Gaya untuk bagian Order Menu */
-.mt-5 h2 {
-  margin-top: 120px;
-  text-align: center;
-}
-
-.menu-card {
-  margin: 20px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.menu-card img {
-  width: auto;
-  height: 200px;
-  object-fit: cover;
-}
-
-.menu-card .card-body {
-  text-align: center;
-}
-
-.menu-card .card-title {
-  font-weight: bold;
-}
-
-.menu-card .card-text {
-  font-size: 16px;
-  color: #333;
-}
-
-.menu-card .btn-primary {
-  background-color: #E25E3E;
-  color: white;
-  font-weight: bold;
-  border: none;
-  transition: background-color 0.3s;
-}
-
-.menu-card .btn-primary:hover {
-  background-color: #E25E3E;
-}
-
-/* CSS untuk form pemesanan */
-.form-container {
-  background-color: #FFBB5C;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.form-container h2 {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* CSS untuk tombol "Pesan Sekarang" dalam form pemesanan */
-.form-container .btn-primary {
-  background-color: #E25E3E;
-  color: white;
-  font-weight: bold;
-  border: none;
-  transition: background-color 0.3s;
-}
-
-.form-container .btn-primary:hover {
-  background-color: #E25E3E;
-}
-
-/* CSS untuk tombol tanpa perubahan warna saat di hover */
-.btn-primary:not(.disabled):not([disabled]):active,
-.btn-primary:not(.disabled):not([disabled]).active {
-  background-color: #E25E3E;
-}
-
-.btn-primary:not(.disabled):not([disabled]):active:focus,
-.btn-primary:not(.disabled):not([disabled]).active:focus,
-.btn-primary:focus {
-  box-shadow: none;
-  background-color: #E25E3E;
-}
-
-/* Gaya untuk Footer */
-.footer {
-  background-color: #FFBB5C;
-  color: #000;
-  padding: 30px 0; /* Jarak dalam footer */
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between; /* Menyusun elemen di footer secara horizontal */
-  align-items: center; /* Pusatkan elemen vertikal di dalam footer */
-}
-
-.footer h6 {
-  color: #000;
-  font-weight: bold;
-}
-
-.footer p {
-  color: #000;
-}
-
-/*# sourceMappingURL=order.css.map */
