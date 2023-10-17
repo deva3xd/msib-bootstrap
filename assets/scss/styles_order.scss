@@ -3,10 +3,24 @@
 @import 'sectionFooter'; 
 
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* _variables.scss */
 
 $primary-color: #FFBB5C;
 $button-color: #E25E3E;
+
+// Custom function to darken a color
+@function darken-color($color, $amount) {
+    @return darken($color, $amount);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 /* Gaya untuk Navbar */
 .navbar {
@@ -63,6 +77,7 @@ $button-color: #E25E3E;
 }
 
 /* Gaya untuk bagian Order Menu */
+/* Gaya untuk bagian Order Menu */
 .mt-5 h2 {
     margin-top: 120px;
     text-align: center;
@@ -95,7 +110,7 @@ $button-color: #E25E3E;
 }
 
 .menu-card .btn-primary {
-    background-color: $button-color;
+    background-color: variables.$button-color;
     color: white;
     font-weight: bold;
     border: none;
@@ -103,7 +118,7 @@ $button-color: #E25E3E;
 }
 
 .menu-card .btn-primary:hover {
-    background-color: $button-color;
+    background-color: darken-color(variables.$button-color, 10%);
 }
 
 /* CSS untuk form pemesanan */
@@ -152,11 +167,11 @@ $button-color: #E25E3E;
 .footer {
     background-color: $primary-color;
     color: #000;
-    padding: 30px 0; 
+    padding: 30px 0; /* Jarak dalam footer */
     margin-top: 20px;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between; /* Menyusun elemen di footer secara horizontal */
+    align-items: center; /* Pusatkan elemen vertikal di dalam footer */
 }
 
 .footer h6 {
