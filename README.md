@@ -1,7 +1,4 @@
 
-# Masakan Minang Padang
-
-Aplikasi pemesanan makanan secara online melalui website.
 ## Kelompok 5
 
 - [@deva3xd](https://www.github.com/deva3xd) -> Menu
